@@ -5,10 +5,12 @@ $(document).ready(function() {
 
 function load_page () {
 
+
   map = new OpenLayers.Map("demoMap");
   map.addLayer(new OpenLayers.Layer.OSM());
   map.zoomToMaxExtent();
 
+  $("#select_query").select2( {width:"resolve"});
   // var data = {
   //     resource_id: '3076913f-38dd-4634-b26e-305c80d88576', // the resource id
   //     limit: 5,
