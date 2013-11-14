@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+.container-alternate, .jumbotron, footer {
+  background-color: #54C571;
+}
+
 #select_container {
   padding: 50px
 }
