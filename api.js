@@ -78,11 +78,12 @@ function select_options() {
 
 function load_page () {
 
-  var map = new OpenLayers.Map("demoMap");
+  var map = new OpenLayers.Map("tour");
   map.addLayer(new OpenLayers.Layer.OSM());
   map.zoomToMaxExtent();
 
   $("#select_query").select2({
+    width: "element",
     data: select_options()
   });
 
