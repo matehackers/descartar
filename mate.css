@@ -1,3 +1,19 @@
-.#div {
-  background-color: #808080;
+.row {
+  padding: 20px;
+  background-color: #999;
+  border-color: #DDD;
+  border-width: 1px;
+}
+
+#select_query {
+  width: 100%
+}
+
+#demoMap {
+  height: 250px;
+}
+
+#main {
+  height: 600px;
+  align: center;
 }
