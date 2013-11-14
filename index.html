@@ -1,43 +1,161 @@
-<!DOCTYPE 
-  html>
-<html>
-<head>
-  <title>Teste JavaScript</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8"> 
-  <!-- Bootstrap -->
-  <link href="select2-3.4.5/select2.css" rel="stylesheet"/>
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link href="mate.css" rel="stylesheet" media="screen">
-  <script src="http://code.jquery.com/jquery.js"></script>
-  <script src="http://openlayers.org/api/OpenLayers.js"></script>
-  <script src="select2-3.4.5/select2.js"></script>
-  <script src="api.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>matehackers.org  </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="select2.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/lighter.css" rel="stylesheet">
+    <link href="mate.css" rel="stylesheet">
 </head>
-<body>
-  <div id="main" class="container">
-    <div class="row">
-      <div class="span5, logo" id="logo">
-        <img src="LOGO_PAPA_TUDO.png" class="img-rounded"  />
-      </div>
-      <div class="span7, logo">
-        <h1> HELLO </h1>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand nav-link" href="#top">#matehackers</a>
+        </div> <!-- /.navbar-header -->
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#features" class="nav-link">Como usar</a></li>
+            <li><a href="#faqs" class="nav-link">FAQs</a></li>
+            <li><a href="#about" class="nav-link">Sobre</a></li>
+          </ul>
+        </div> <!-- /.navbar-collapse -->
+      </div> <!-- /.container -->
+    </nav> <!-- /.navbar -->
+
+    <div id="top" class="jumbotron">
+      <div class="container">
+        <h1>Separando e cantando</a></h1>
+        <h2>Descubra onde descartar qualquer resíduo na cidade de Porto Alegre</h2>
+        <!-- <p><a class="btn btn-primary btn-lg">Sign Up Today <span class="glyphicon glyphicon-circle-arrow-right"></span></a></p> -->
+      </div> <!-- /.container -->
+    </div> <!-- /.jumbotron -->
+
+    <div class="container">
+      <h3 id="features" class="subhead">Como usar</h3>
+      <div class="row benefits">
+        <div class="col-md-4 col-sm-6 benefit">
+          <div class="benefit-ball">
+            <span class="glyphicon glyphicon-home"></span>
+          </div>
+          <h3>Passo 1:</h3>
+          <p>Digite o nome do produto que deseja descartar.</p>
+        </div> <!-- /.benefit -->
+
+        <div class="col-md-4 col-sm-6 benefit">
+          <div class="benefit-ball">
+            <span class="glyphicon glyphicon-cloud"></span>
+          </div>
+          <h3>Passo 2:</h3>
+          <p>Aguarde enquanto os dados são carregados.</p>
+        </div> <!-- /.benefit -->
+
+        <div class="col-md-4 col-sm-6 benefit">
+          <div class="benefit-ball">
+            <span class="glyphicon glyphicon-bell"></span>
+          </div>
+          <h3>Passo 3:</h3>
+          <p>Joge o lixo no chão </p>
+        </div> <!-- /.benefit -->
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <div class="container-alternate" id="select_container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+              <select id="select_query">
+              </select>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="span12">
-        <select id="select_query">
-          <option>Bla</option>
-        </select>
-      </div>
+
+    <div class="container">
+      <div class="row about">
+        <div class="col-md-10 col-md-offset-1 text-center">
+        <h3 id="about" class="subhead">Como descartar [item] em porto alegre?</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna.  Ut wisi
+          enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
+          autem vel eum iriure dolor in hendrerit in vulputate velit esse
+          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+          vero eros et accumsan.
+        </p>
+        </div> <!-- /.col-md-12 -->
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <div class="container-alternate">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="tour" class="carousel slide">    
+            </div> <!-- #tour -->
+          </div> <!-- /.col-md-12 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
     </div>
-    <div class="row-fluid">
-      <div class="span4" id="info">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
-Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.
-      </div>
-      <div class="span8" id="demoMap"></div>
-    </div>
-  </div>
-</body>
+
+    <div class="container">
+      <h3 id="about" class="subhead">Quem somos</h3>
+      <div class="row about">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna.  Ut wisi
+            enim ad minim veniam, quis nostrud exerci tation ullamcorper
+            suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
+            autem vel eum iriure dolor in hendrerit in vulputate velit esse
+            molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+            vero eros et accumsan.
+          </p>
+          <p>
+            Nam liber tempor cum soluta nobis eleifend option congue nihil
+            imperdiet doming id quod mazim placerat facer possim assum. Typi non
+            habent claritatem insitam; est usus legentis in iis qui facit eorum
+            claritatem. Investigationes demonstraverunt lectores legere me lius
+            quod ii legunt saepius.
+          </p>
+        </div> <!-- /.col-md-10 -->
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <footer>
+      <div class="container clearfix">
+        <p class="pull-left">
+          Copyleft &copy; #matehackers 2013
+        </p>
+        <p class="pull-right">
+          a template from <a href="http://coverstrap.com">Coverstrap</a>
+        </p>
+      </div> <!-- /.container -->
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="select2.js"></script>
+    <script src="http://openlayers.org/api/OpenLayers.js"></script>
+    <script src="api.js"></script>
+    <script>
+      $(".nav-link").click(function(e) {
+        e.preventDefault();
+        var link = $(this);
+        var href = link.attr("href");
+        $("html,body").animate({scrollTop: $(href).offset().top - 80}, 500);
+        link.closest(".navbar").find(".navbar-toggle:not(.collapsed)").click();
+      });
+    </script>
+  </body>
 </html>

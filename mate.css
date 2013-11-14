@@ -1,23 +1,11 @@
-
-#select_query {
-  width: 100%
-}
-
-#demoMap {
+#tour{
   height: 500px;
-  padding: 20px;
 }
 
-#main {
-  height: 600px;
+#select_query{
+  width: 100%;
 }
 
-#info {
-  padding: 15px;
-}
-
-.logo {
-  padding: 20px;
-  /*background-image: url('fundo_topo.png');*/
-  background-repeat: repeat-y;
+#select_container {
+  padding: 50px
 }
