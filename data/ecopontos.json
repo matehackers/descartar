@@ -6,8 +6,8 @@
     "bairro": "Cristal",
     "telefone": "3311-4730",
     "cep": "90840-000",
-    "latitude": "-30,089092",
-    "longitude": "-51,248564"
+    "latitude": -30.089092,
+    "longitude": -51.248564
   },
   {
     "nome": "Destino Certo Zona Norte",
@@ -16,8 +16,8 @@
     "bairro": "Rubem Berta",
     "telefone": "3386-2155",
     "cep": "91160-000",
-    "latitude": "-29,999042",
-    "longitude": "-51,106514"
+    "latitude": -29.999042,
+    "longitude": -51.106514
   },
   {
     "nome": "Destino Certo Vila Cruzeiro",
@@ -26,8 +26,8 @@
     "bairro": "Santa Tereza",
     "telefone": "",
     "cep": "90840-000",
-    "latitude": "-30,081981",
-    "longitude": "-51,229228"
+    "latitude": -30.081981,
+    "longitude": -51.229228
   },
   {
     "nome": "Destino Certo Teresópolis e Glória",
@@ -36,7 +36,7 @@
     "bairro": "Glória",
     "telefone": "",
     "cep": "91720-090",
-    "latitude": "-30,079864",
-    "longitude": "-51,20187"
+    "latitude": -30.079864,
+    "longitude": -51.20187
   }
 ]
