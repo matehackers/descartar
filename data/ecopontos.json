@@ -1,0 +1,42 @@
+[
+  {
+    "nome": "Destino Certo Cristal",
+    "rua": "Av. Diário de Notícias",
+    "número": 1111,
+    "bairro": "Cristal",
+    "telefone": "3311-4730",
+    "cep": "90840-000",
+    "latitude": "-30,089092",
+    "longitude": "-51,248564"
+  },
+  {
+    "nome": "Destino Certo Zona Norte",
+    "rua": "Av. Bernardino Silveira Amorim",
+    "número": 2261,
+    "bairro": "Rubem Berta",
+    "telefone": "3386-2155",
+    "cep": "91160-000",
+    "latitude": "-29,999042",
+    "longitude": "-51,106514"
+  },
+  {
+    "nome": "Destino Certo Vila Cruzeiro",
+    "rua": "R. Cruzeiro do Sul",
+    "número": 1445,
+    "bairro": "Santa Tereza",
+    "telefone": "",
+    "cep": "90840-000",
+    "latitude": "-30,081981",
+    "longitude": "-51,229228"
+  },
+  {
+    "nome": "Destino Certo Teresópolis e Glória",
+    "rua": "R. Professor Carvalho de Freitas",
+    "número": 1012,
+    "bairro": "Glória",
+    "telefone": "",
+    "cep": "91720-090",
+    "latitude": "-30,079864",
+    "longitude": "-51,20187"
+  }
+]

@@ -1,0 +1,932 @@
+[
+  {
+    "bairro": "Azenha",
+    "nome": "EPTC - sede",
+    "endereco": "rua João Neves da Fontoura, 7",
+    "horario": "2ªa 6ª - 8h30 às 12h e das 13h30 às 18h",
+    "telefone": "3289-4226",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.047009707956,
+    "longitude": -51.217260342179
+  },
+  {
+    "bairro": "Azenha",
+    "nome": "DMLU",
+    "endereco": "Av. Azenha, 631",
+    "horario": "2ª 6ª das 8:00 às 12:00 / das 13:00 às 17:30",
+    "telefone": "3289-6991",
+    "empresa_coletora": "",
+    "latitude": -30.049436315104,
+    "longitude": -51.213368848047
+  },
+  {
+    "bairro": "Bela Vista",
+    "nome": "SOCIEDADE EDUCACIONAL LEONARDO DA VINCI",
+    "endereco": "Av. Nilo Peçanha, 2400",
+    "horario": "2ª 6ª 7-20:00 e sáb 8:00-12:00",
+    "telefone": "3328-6098 / 3328-9525",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.028117645001,
+    "longitude": -51.168128152022
+  },
+  {
+    "bairro": "Belém Novo",
+    "nome": "Capatazia Belém Novo",
+    "endereco": "Av. Juca Batista, 10400",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3259-1956",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.206098663652,
+    "longitude": -51.179367320827
+  },
+  {
+    "bairro": "Belém Velho",
+    "nome": "PSF Nossa Senhora de Belém",
+    "endereco": "Rua João do Couto nº 294",
+    "horario": "2ªf a 6ªf - 8h-12h 13h-17h (menos 5ªf)",
+    "telefone": "3266-9139",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.115734523438,
+    "longitude": -51.178873100101
+  },
+  {
+    "bairro": "Bom Fim",
+    "nome": "Centro Integrado de Desenvolvimento LTDA.",
+    "endereco": "Rua Fernandes Vieira, 553",
+    "horario": "2ª6ª: 8:00- 18:45",
+    "telefone": "3311-2789",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.034502777853,
+    "longitude": -51.211026274574
+  },
+  {
+    "bairro": "Bom Jesus",
+    "nome": "Capatazia Fátima",
+    "endereco": "Rua Alfredo Ferreira Rodrigues, 975",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3367-3777",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.047769645614,
+    "longitude": -51.154964844398
+  },
+  {
+    "bairro": "Bom Jesus",
+    "nome": "EMEF Fátima",
+    "endereco": "Rua A,  Vlila N.Sra.Fátima, 15",
+    "horario": "2ª 6ª - 8:00-12:00 /14:00-18:00 /19:00-21:00h",
+    "telefone": "3338-3695",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.045642316402,
+    "longitude": -51.15798691118
+  },
+  {
+    "bairro": "Bom Jesus",
+    "nome": "FASC- Centro Regional Leste",
+    "endereco": "R São Domingos, 79",
+    "horario": "2º-6º: 8:00-12:00 /13:00-17:00",
+    "telefone": "33344238/33867628",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.042300931012,
+    "longitude": -51.152870313686
+  },
+  {
+    "bairro": "Camaquã",
+    "nome": "EMEI Jardim Camaquã",
+    "endereco": "Rua Jardim das Bromélias, 01",
+    "horario": "2ª 6ª - 7:00-19:00h",
+    "telefone": "3241-4986",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.110566844183,
+    "longitude": -51.234442668086
+  },
+  {
+    "bairro": "Campo Novo",
+    "nome": "Escola Estadual de Ensino Fundamental Paulina Moresco",
+    "endereco": "Rua Thomé de Souza, 160",
+    "horario": "2º-6º: 8:00-17:00",
+    "telefone": "3245-3888",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.083270189467,
+    "longitude": -51.085675312524
+  },
+  {
+    "bairro": "Cavalhada",
+    "nome": "Escola Municipal Ensino Fundam. Neusa Goulart Brizola",
+    "endereco": "Rua Monsenhor Rubem Neis, s/n",
+    "horario": "2º-6º:7:30-12:00/13:15-17:45",
+    "telefone": "3246-9999",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.027700272151,
+    "longitude": -51.228729726626
+  },
+  {
+    "bairro": "Cavalhada",
+    "nome": "EMEI bairro Cavalhada",
+    "endereco": "Rua Canela, 180",
+    "horario": "2ª6ª - 7:30-18:30h",
+    "telefone": "3241-3604",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.0992486877,
+    "longitude": -51.228344273591
+  },
+  {
+    "bairro": "Cavalhada",
+    "nome": "Capatazia Cavalhada",
+    "endereco": "Av. Otto Niemeyer, 3206",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3245-5753",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.106007628363,
+    "longitude": -51.242743410369
+  },
+  {
+    "bairro": "Centro",
+    "nome": "I.Federal",
+    "endereco": "Rua Coronel Vicente, 281",
+    "horario": "2ª-6ª: 7:30 - 22:30",
+    "telefone": "3930-6010",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.0265644373,
+    "longitude": -51.220984429138
+  },
+  {
+    "bairro": "Centro",
+    "nome": "Capatazia do Gasômetro",
+    "endereco": "Av. João Goulart, 158",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3224-9724",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.035478195558,
+    "longitude": -51.24105136429
+  },
+  {
+    "bairro": "Centro",
+    "nome": "Capatazia da Conceição - Sc Centro",
+    "endereco": "Rua Alberto Bins,   elevada Conceição",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3226-1950",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.027701989065,
+    "longitude": -51.228733341136
+  },
+  {
+    "bairro": "Centro",
+    "nome": "EMEF Porto Alegre",
+    "endereco": "Rua Washington Luis, 203",
+    "horario": "2ª6ª - 8:00-17:00 h",
+    "telefone": "3227-4429",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.036333266939,
+    "longitude": -51.238638207745
+  },
+  {
+    "bairro": "Centro",
+    "nome": "Fundação Universidade Federal de Ciências de Saúde de Porto Alegre",
+    "endereco": "Rua Sarmento Leite, 245",
+    "horario": "2ª6ª - das 8h às 12h e das 13h às 17h",
+    "telefone": "3303-8769",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.031916644219,
+    "longitude": -51.22034051621
+  },
+  {
+    "bairro": "Centro",
+    "nome": "DEP - Fábrica de Pré-moldados",
+    "endereco": "Av. Loureiro da Silva nº 250",
+    "horario": "2ª 6ª: 8:00-18:00",
+    "telefone": 32892284,
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.037245156722,
+    "longitude": -51.237005375163
+  },
+  {
+    "bairro": "Cidade Baixa",
+    "nome": "DEP - Lima e Silva",
+    "endereco": "Rua Gen. Lima e Silva nº 972",
+    "horario": "2ª 6ª - 8:30 às 18:30",
+    "telefone": "3289-2231",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.040720187369,
+    "longitude": -51.218628636723
+  },
+  {
+    "bairro": "Cidade Baixa",
+    "nome": "EMEI dos Municipários Tio Barnabé",
+    "endereco": "Rua Otto Ernest Meyer, 55",
+    "horario": "2ª 6ª - 8:00-18:00h",
+    "telefone": "3227-4591",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.044931855773,
+    "longitude": -51.216611297956
+  },
+  {
+    "bairro": "Cidade Baixa",
+    "nome": "SENAC Informática",
+    "endereco": "Av. Venâncio Aires nº 93",
+    "horario": "2ª 6ª - 8h às 21h",
+    "telefone": "3029-3633",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.042731909125,
+    "longitude": -51.218823463405
+  },
+  {
+    "bairro": "Cidade Baixa",
+    "nome": "SESC Mulher",
+    "endereco": "Av. João Pessoa, 835",
+    "horario": "2ª 6ª - 8:00-22:00h",
+    "telefone": 32260631,
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.039105045091,
+    "longitude": -51.218088539609
+  },
+  {
+    "bairro": "Cidade Baixa",
+    "nome": "Capatazia da República - Sc Centro",
+    "endereco": "Rua da República, 711",
+    "horario": "2ª 6ª: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3212-8071",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.040590718167,
+    "longitude": -51.226385607684
+  },
+  {
+    "bairro": "Costa e Silva",
+    "nome": "Capatazia Porto Seco",
+    "endereco": "Av. Plínio Kroeff, 752",
+    "horario": "2ª 6ª: 7:30-12:00 13:30 - 17:00 sab:7:30- 12:00",
+    "telefone": "3347-1964",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.001002671101,
+    "longitude": -51.115572373006
+  },
+  {
+    "bairro": "Cristal",
+    "nome": "SOCIEDADE EDUCACIONAL LEONARDO DA VINCI - Leo Beta",
+    "endereco": "Av. Icaraí, 1879",
+    "horario": "2ª 6ª - 8:00-18:00",
+    "telefone": "3249-8840",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.09503964312,
+    "longitude": -51.245165333407
+  },
+  {
+    "bairro": "Cristal",
+    "nome": "Destino Certo Zona Sul",
+    "endereco": "Av. Diario de Noticias, 1111",
+    "horario": "2ª 6ª - 7:00- 21:00",
+    "telefone": "9638-7374",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.0894804467,
+    "longitude": -51.248603384996
+  },
+  {
+    "bairro": "Cristal",
+    "nome": "EMEF Aramy Silva",
+    "endereco": "Av. Chico Pedro, 390",
+    "horario": "2ª 6ª : 7:30-17:50h",
+    "telefone": "3289-5947/5946",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.097916293923,
+    "longitude": -51.241528027912
+  },
+  {
+    "bairro": "Cristal",
+    "nome": "Clube de Mães do Cristal",
+    "endereco": "Rua Curupaiti, 915",
+    "horario": "2ª a 6ª - à tarde",
+    "telefone": "9974-6005",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.087196170706,
+    "longitude": -51.239595707798
+  },
+  {
+    "bairro": "Cristo Redentor",
+    "nome": "Colégio Adventista Marechal Rondon",
+    "endereco": "Rua Mali, 255",
+    "horario": "2ª6ª: 7:15- 12:00 sab: 13:00- 15:00/ 17:30",
+    "telefone": "3349-6600 / 3340-3375",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.01284679049,
+    "longitude": -51.148720381433
+  },
+  {
+    "bairro": "Floresta",
+    "nome": "Capatazia Cancio Gomes - Sc Norte",
+    "endereco": "Travessa Carmem, 111",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3395-1327",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.019471155802,
+    "longitude": -51.204623510302
+  },
+  {
+    "bairro": "Glória",
+    "nome": "Capatazia Glória",
+    "endereco": "Rua Carvalho de Freitas, 1.012",
+    "horario": "2ªf a 6ª f - 7:30-17h Sáb. - 7:30 - 11:30h",
+    "telefone": "3322-0340",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.079961273259,
+    "longitude": -51.201857431597
+  },
+  {
+    "bairro": "Hípica",
+    "nome": "EMEF Prof. Anísio Teixeira",
+    "endereco": "Rua Francisco Mattos Terres, 40",
+    "horario": "2ª 6ª - 7:45-12:00/ 13:25-17:40h",
+    "telefone": "3264-1540 / 3289-9598",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.159724521305,
+    "longitude": -51.200843134415
+  },
+  {
+    "bairro": "Humaitá",
+    "nome": "Capatazia Humaitá - Sc Norte",
+    "endereco": "Rua José Aloisio Filho, 780",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3325-3160",
+    "empresa_coletora": "Ecológica",
+    "latitude": -29.981904385859,
+    "longitude": -51.18551646629
+  },
+  {
+    "bairro": "IAPI",
+    "nome": "Capatazia IAPI - Sc Norte",
+    "endereco": "Av Assis Brasil, 1715",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3342-6121",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.010934442025,
+    "longitude": -51.170292632535
+  },
+  {
+    "bairro": "Ilha da Pintada - Arquipélago",
+    "nome": "EMEI - Ilha da Pintada",
+    "endereco": "Rua dos Garruchos s/nº",
+    "horario": "2ªf a 6ªf: de 8h a 18h",
+    "telefone": "3211-7542",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.027701864411,
+    "longitude": -51.228731833441
+  },
+  {
+    "bairro": "Ipanema",
+    "nome": "Capatazia Ipanema",
+    "endereco": "Av. Guaíba, 2027",
+    "horario": "2ª-6ª: 8:00-18:00 sáb: 8:00-12:00",
+    "telefone": "3248-1725",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.097655148227,
+    "longitude": -51.256874651885
+  },
+  {
+    "bairro": "Ipanema",
+    "nome": "Fundação de Proteção Especial",
+    "endereco": "Rua Déa Coufal, 878",
+    "horario": "",
+    "telefone": "3248-2490",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.129157881103,
+    "longitude": -51.228139780317
+  },
+  {
+    "bairro": "Ipanema",
+    "nome": "Clube do Professor Gaúcho",
+    "endereco": "Av. Guaíba, 12060",
+    "horario": "2ª 6ª:  9h às 20h",
+    "telefone": "3248-5710",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.14510254411,
+    "longitude": -51.225364619803
+  },
+  {
+    "bairro": "Ipanema",
+    "nome": "EEEF Monte Líbano",
+    "endereco": "rua Lemuria nº 10",
+    "horario": "",
+    "telefone": 32469874,
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.130090571499,
+    "longitude": -51.226796337661
+  },
+  {
+    "bairro": "Ipanema",
+    "nome": "Escola de Educação Infantil Amoreco",
+    "endereco": "Rua Engenheiro Tito Marques Fernandes nº 80",
+    "horario": "2ª a 6ª: 7h15 às 19h",
+    "telefone": "3246-9212",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.1429145535,
+    "longitude": -51.22547611128
+  },
+  {
+    "bairro": "Jardim Botânico",
+    "nome": "Anchieta Coml de Combustíveis Ltda",
+    "endereco": "Av. Salvador França, 981",
+    "horario": "todos os dias - das 8:00 às 22:00 h",
+    "telefone": "3319-3702",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.055328025622,
+    "longitude": -51.182612675556
+  },
+  {
+    "bairro": "Jardim Itú Sabará",
+    "nome": "EMEI Vale Verde",
+    "endereco": "Beco Franklin, 270",
+    "horario": "2ª6ª - 8:00-17:00 h",
+    "telefone": "3386-2044",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.041217911354,
+    "longitude": -51.142870225895
+  },
+  {
+    "bairro": "Jardim Itú Sabará",
+    "nome": "EMEF Profº Luiz Francisco Lucena Borges",
+    "endereco": "Rua Cláudio Manuel da Costa, 270",
+    "horario": "2ª6ª - 7:00-12:00 / 13:30-17:30 h",
+    "telefone": "3338-3350 / 3289-5875",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.033967742203,
+    "longitude": -51.14654998816
+  },
+  {
+    "bairro": "Jardim Sabará",
+    "nome": "CTG Tiarayu",
+    "endereco": "Rua Abilio Mulle, 251",
+    "horario": "todos os dias das 10 às 22 h",
+    "telefone": "3381-5657 / 9975-8259",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.027703298419,
+    "longitude": -51.22873236598
+  },
+  {
+    "bairro": "Lami",
+    "nome": "Capatazia Lami",
+    "endereco": "Rua Otaviano José Pinto,   Pontal",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3258-5055",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.027701733564,
+    "longitude": -51.22873181349
+  },
+  {
+    "bairro": "Lomba do Pinheiro",
+    "nome": "EMEI Maria Marques Fernandes",
+    "endereco": "Av. Santo Dias da Silva, 550  Vila Mapa",
+    "horario": "2ª 6ª - 7:00-19:00h",
+    "telefone": "3319-1208",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.097160563835,
+    "longitude": -51.133348391204
+  },
+  {
+    "bairro": "Lomba do Pinheiro",
+    "nome": "EMEI da Vila Nova São Carlos",
+    "endereco": "Estr. João de Oliveira Remião esq. A, s/nº  Parada 12",
+    "horario": "2ª6ª - 10:00-15:00 h",
+    "telefone": "3319-1146",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.027700625433,
+    "longitude": -51.228729962178
+  },
+  {
+    "bairro": "Lomba do Pinheiro",
+    "nome": "EMEF São Pedro",
+    "endereco": "Beco da Taquara, s/nº",
+    "horario": "5ª - 14:00 - 17:00h",
+    "telefone": "3319-1206",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.027703496697,
+    "longitude": -51.228730926965
+  },
+  {
+    "bairro": "Lomba do Pinheiro",
+    "nome": "EMEF Afonso Guerreiro Lima",
+    "endereco": "Rua Guaíba, 203  PD.11-Vila Nova São Carlos",
+    "horario": "2ª6ª- 7:30-12/ 13:10-17:40/ 18:30-22:00h",
+    "telefone": "3319-1011",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.027703121593,
+    "longitude": -51.228732415701
+  },
+  {
+    "bairro": "Mário Quintana",
+    "nome": "EMEF Chico Mendes",
+    "endereco": "Rua Gentil Amâncio Clemente, 01",
+    "horario": "2ª6ª - 7:30-12:00 / 13:30-17:30 h",
+    "telefone": "3387-6400",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.033484592518,
+    "longitude": -51.112674324833
+  },
+  {
+    "bairro": "Mário Quintana",
+    "nome": "CEEMEF Wenceslau Fontoura",
+    "endereco": "Rua Irmã Faveiro, s/nº",
+    "horario": "2ª6ª - 7:35-12 / 13:30-17:30 / 18:30-22:30 h",
+    "telefone": "3366-2911 / 3289-5847",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.027703097588,
+    "longitude": -51.228729759786
+  },
+  {
+    "bairro": "Mário Quintana",
+    "nome": "EMEI Valneri Antunes",
+    "endereco": "Estr. Martim Félix Berta, 2353",
+    "horario": "2º-6ª:7:00-18:45",
+    "telefone": "3287-6077",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.030536114302,
+    "longitude": -51.113160812957
+  },
+  {
+    "bairro": "Mário Quintana",
+    "nome": "EMEF Timbaúva",
+    "endereco": "Rua Seis, s/nº",
+    "horario": "2ª6ª - 8:00-12:00 / 13:00-17:30 h",
+    "telefone": "3368-5355",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.027701350794,
+    "longitude": -51.228729742789
+  },
+  {
+    "bairro": "Medianeira",
+    "nome": "Capatazia Niteroi",
+    "endereco": "Av. Niteroi, 19",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3217-9257",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.068506670333,
+    "longitude": -51.213011632746
+  },
+  {
+    "bairro": "Menino Deus",
+    "nome": "Ginásio Tesourinha",
+    "endereco": "Rua Érico Veríssimo S/Nº",
+    "horario": "2ª a 6ª - 8h às 22h",
+    "telefone": "3289-8332",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.027700166012,
+    "longitude": -51.228732391562
+  },
+  {
+    "bairro": "Navegantes",
+    "nome": "Ponto das Padarias",
+    "endereco": "Av. Sertório, 1105",
+    "horario": "2ª6ª - 8 às 18 h",
+    "telefone": "3342-2266",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.001007522055,
+    "longitude": -51.194584235275
+  },
+  {
+    "bairro": "Navegantes",
+    "nome": "SESC- Administração Regional no Estado do Rio Grande do Sul",
+    "endereco": "Av. Brasil, 483",
+    "horario": "",
+    "telefone": 33425099,
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.004762156312,
+    "longitude": -51.202537478885
+  },
+  {
+    "bairro": "Parque dos Mayas",
+    "nome": "Colégio Luterano São Paulo",
+    "endereco": "Av. Tarcila Moraes Dutra, 799",
+    "horario": "2ª 6ª 8:00-12:00 / 13:30-17:30h",
+    "telefone": "3367-4802",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.000071195326,
+    "longitude": -51.093430106781
+  },
+  {
+    "bairro": "Partenon",
+    "nome": "Capatazia Tenente Alpoin",
+    "endereco": "Rua José Rodrigues Sobral, 958",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3354-6248",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.068230008209,
+    "longitude": -51.176967416787
+  },
+  {
+    "bairro": "Partenon",
+    "nome": "EMEF Dep. Marcírio Goulart Loureiro",
+    "endereco": "Rua Saibreira, 01",
+    "horario": "2ª6ª - 7:30-11:30 / 13:30-17:00 h",
+    "telefone": "3315-6069",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.078246697097,
+    "longitude": -51.172403907233
+  },
+  {
+    "bairro": "Passo D'Areia",
+    "nome": "Instituto Vicente Palloti",
+    "endereco": "Rua Tupi, 212",
+    "horario": "2ª6ª: 8:00- 17:00",
+    "telefone": "3341-3055",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.011245198312,
+    "longitude": -51.171392149121
+  },
+  {
+    "bairro": "Passo das Pedras",
+    "nome": "EMEF Pepita de Leão",
+    "endereco": "Rua Estádio, 29",
+    "horario": "2ª6ª - 7:30-12 h / 13-17:45 h",
+    "telefone": "3344-1522",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.015329536965,
+    "longitude": -51.128025639397
+  },
+  {
+    "bairro": "Passo das Pedras",
+    "nome": "EMEI Érico Veríssimo",
+    "endereco": "Rua Modesto Franco, 100",
+    "horario": "2ª6ª - 7:00-19:00 h",
+    "telefone": "3348-1408 / 3289-5870",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.014643855452,
+    "longitude": -51.128201334519
+  },
+  {
+    "bairro": "Passo das Pedras",
+    "nome": "EMEF Presidente Vargas",
+    "endereco": "Rua Ana Aurora do Amaral Lisboa, 60",
+    "horario": "2ª6ª - 7:30-12:00 / 13:30 - 17:45 h",
+    "telefone": "3348-1732",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.016171919317,
+    "longitude": -51.127466717933
+  },
+  {
+    "bairro": "Praia de Belas",
+    "nome": "SMOV - Sede",
+    "endereco": "Av. Borges de Medeiros, 2244",
+    "horario": "2º-6º:8:30-12:00/14:00-17:00",
+    "telefone": "3289-8736",
+    "empresa_coletora": "",
+    "latitude": -30.044110517866,
+    "longitude": -51.228804647387
+  },
+  {
+    "bairro": "Pedra Redonda",
+    "nome": "AABB - Associação Atlética Banco do Brasil",
+    "endereco": "Av. Coronel Marcos, 1000",
+    "horario": "dom a dom: 24 hrs",
+    "telefone": "32431021 / 3243-1099",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.124071606707,
+    "longitude": -51.245649578976
+  },
+  {
+    "bairro": "Protásio Alves",
+    "nome": "EMEF Prof. Ana Iris do Amaral",
+    "endereco": "Av. Mario Meneghetti, 1000",
+    "horario": "2ª6ª- 7:45- 12:00 13:15- 17:30",
+    "telefone": "3386-2690",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.032015279344,
+    "longitude": -51.125419879868
+  },
+  {
+    "bairro": "Restinga",
+    "nome": "Capatazia Restinga",
+    "endereco": "Rua Rubens Torrelli, 50",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3250-1952",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.151167958829,
+    "longitude": -51.146101860294
+  },
+  {
+    "bairro": "Restinga",
+    "nome": "EMEI Vila Nova Restinga",
+    "endereco": "Rua Álvaro Difini, 480, 480",
+    "horario": "2ª6ª - 7:00-19:00 h",
+    "telefone": "3250-1600",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.148118531348,
+    "longitude": -51.141789101719
+  },
+  {
+    "bairro": "Restinga",
+    "nome": "EMEF Tristão Sucupira Vianna",
+    "endereco": "Av. Econ. Nilo Wulff, 955",
+    "horario": "2ª6ª - 7:30-17:30 h",
+    "telefone": "3250-1527",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.151056023914,
+    "longitude": -51.144184290531
+  },
+  {
+    "bairro": "Restinga Velha",
+    "nome": "EMEI Paulo Freire",
+    "endereco": "Av. Meridional s/n",
+    "horario": "2ª6ª- 7:00- 19:00",
+    "telefone": "3250-2430",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.027701489941,
+    "longitude": -51.228730527835
+  },
+  {
+    "bairro": "Rubem Berta",
+    "nome": "Instituto Madre Tereza",
+    "endereco": "Rua Wolfran Metzler, 605",
+    "horario": "2ª a 6ª:  7h às 18h",
+    "telefone": "3366-3177",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.024725500592,
+    "longitude": -51.103985653156
+  },
+  {
+    "bairro": "Santa Cecília",
+    "nome": "Capatazia Silva Só",
+    "endereco": "Av Silva Só,   sob elevada Tiradentes",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3331-4519",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.027703946935,
+    "longitude": -51.228734354667
+  },
+  {
+    "bairro": "Santa Tereza",
+    "nome": "Destino Certo",
+    "endereco": "Av. Cruzeiro do Sul, 1445",
+    "horario": "2ª a sab: 8:00- 20:00",
+    "telefone": "3231-6064",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.082057898204,
+    "longitude": -51.229215236679
+  },
+  {
+    "bairro": "Santa Tereza",
+    "nome": "EMEI Vila Tronco",
+    "endereco": "Rua Dr. Ildefonso Pinto, 346",
+    "horario": "2ª6ª - 7:00-19 h",
+    "telefone": "3266-9519",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.079912804036,
+    "longitude": -51.230279757048
+  },
+  {
+    "bairro": "Santa Tereza",
+    "nome": "EMEF Ver. Martim Aranha",
+    "endereco": "Rua Cônego Paulo Isidora de Nadal, s/nº",
+    "horario": "2ª6ª - 8:00-12:00 / 14:00-17:00 h",
+    "telefone": "3266-6228",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.027699102279,
+    "longitude": -51.228730847315
+  },
+  {
+    "bairro": "Santana",
+    "nome": "Academia Alternativa",
+    "endereco": "Rua São Luiz, 444",
+    "horario": "2ª6ª: 7:00- 24:00/ sab: 9:00- 16:00 dom:16:00- 19:00",
+    "telefone": "3061-2966",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.047053536812,
+    "longitude": -51.204886785989
+  },
+  {
+    "bairro": "São Geraldo",
+    "nome": "Colégio Concórdia",
+    "endereco": "Av. Pres. Rooswelt, 770",
+    "horario": "",
+    "telefone": "3342-0755",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.00667149935,
+    "longitude": -51.20233134369
+  },
+  {
+    "bairro": "São João",
+    "nome": "Capatazia Pereira Franco - Sc Norte",
+    "endereco": "rua Pereira Franco, 135",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3325-2890",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.005379392181,
+    "longitude": -51.191627675743
+  },
+  {
+    "bairro": "São José",
+    "nome": "EMEI Dr. Walter Silber",
+    "endereco": "Rua Frei Clemente, 150",
+    "horario": "2ª6ª - 7:00-19h",
+    "telefone": "3336-1893",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.070763431471,
+    "longitude": -51.169937355319
+  },
+  {
+    "bairro": "São José",
+    "nome": "EMEF Profª Judith Macedo de Araújo",
+    "endereco": "Rua Saul Constantino, 100  Vila Comunitária",
+    "horario": "2ª6ª - 7:30-23 h",
+    "telefone": "3385-1308",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.07621274867,
+    "longitude": -51.164141455004
+  },
+  {
+    "bairro": "Sarandi",
+    "nome": "Seção Nordeste",
+    "endereco": "Rua Dom Jaime de Barros C., 815",
+    "horario": "2º-6º: 8:00-18:00 sab: 8:00-12:00",
+    "telefone": "3365-4053",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.0025103358,
+    "longitude": -51.130559467494
+  },
+  {
+    "bairro": "Sarandi",
+    "nome": "EEEF Dr. Ferreira de Abreu",
+    "endereco": "Av. Botoui nº 25",
+    "horario": "",
+    "telefone": 33652555,
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -29.998539463059,
+    "longitude": -51.127778662331
+  },
+  {
+    "bairro": "Sarandi",
+    "nome": "EMEI da Vila Elizabeth",
+    "endereco": "Rua Paulo Gomes de Oliveira, 120",
+    "horario": "2ª6ª - 7:00 às 19:00 h",
+    "telefone": "3364-5013",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -29.980198378279,
+    "longitude": -51.125822994875
+  },
+  {
+    "bairro": "Sarandi",
+    "nome": "Escola Adventista de Ensino Fundamental de Sarandi",
+    "endereco": "Rua Passos Figuroa, 841",
+    "horario": "2ª6ª: 7:30- 12:00 / 13:00- 17:30",
+    "telefone": "3364-7979",
+    "empresa_coletora": "Ecológica",
+    "latitude": -29.991391390093,
+    "longitude": -51.132881389959
+  },
+  {
+    "bairro": "Tristeza",
+    "nome": "E.E.E.F. Osório Duque Estrada",
+    "endereco": "R. Cidade de Natal, 125",
+    "horario": "2ª6ª: 7:50- 12:50 13:30- 17:30",
+    "telefone": "3268-3593",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.101417912929,
+    "longitude": -51.247126024452
+  },
+  {
+    "bairro": "Tristeza",
+    "nome": "Floricultura Winge",
+    "endereco": "R. Mario Tota, 963",
+    "horario": "2ª6ª: 8:30- 18:15",
+    "telefone": "3268-4880",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.112971093784,
+    "longitude": -51.250098822896
+  },
+  {
+    "bairro": "Vila Assunção",
+    "nome": "Escola Estadual de Ensino Médio Santos Dumont",
+    "endereco": "Rua Caeté, 328",
+    "horario": "2ª6ª - 8:00-12:00 / 13:30-18:00 / 19:00-22:00 h",
+    "telefone": "3268-1241",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.102766089494,
+    "longitude": -51.259202085716
+  },
+  {
+    "bairro": "Vila Jardim",
+    "nome": "Unidade de Saúde Divina Providência",
+    "endereco": "Rua Cananéia, 220",
+    "horario": "2º-6º:8:00-17:00",
+    "telefone": "3378-2275",
+    "empresa_coletora": "Ecológica",
+    "latitude": -30.031804169423,
+    "longitude": -51.156820201745
+  },
+  {
+    "bairro": "Vila Nova",
+    "nome": "Escola Municipal Vila Monte Cristo",
+    "endereco": "Rua Carlos Superti, 84",
+    "horario": "2º-6º:7:30-12:00/13:30-22:00",
+    "telefone": "3246-4659",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.122192292101,
+    "longitude": -51.217860301772
+  },
+  {
+    "bairro": "Vila Nova",
+    "nome": "EMEI Jardim Salomoni",
+    "endereco": "Rua Joaquim de Carvalho, 320",
+    "horario": "2ª6ª - 9:00-18:00h",
+    "telefone": "3246-4712",
+    "empresa_coletora": "Faros Coleto",
+    "latitude": -30.115752264733,
+    "longitude": -51.220754417969
+  }
+]
