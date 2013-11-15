@@ -57,7 +57,7 @@
             <span class="glyphicon glyphicon-cloud"></span>
           </div>
           <h3>Passo 2:</h3>
-          <p>Aguarde enquanto os dados são carregados.</p>
+          <p>Leia as informações.</p>
         </div> <!-- /.benefit -->
 
         <div class="col-md-4 col-sm-6 benefit">
@@ -65,13 +65,16 @@
             <span class="glyphicon glyphicon-bell"></span>
           </div>
           <h3>Passo 3:</h3>
-          <p>Joge o lixo no chão </p>
+          <p>Descarte o seus resíduos da maneira mais correta.</p>
         </div> <!-- /.benefit -->
       </div> <!-- /.row -->
     </div> <!-- /.container -->
 
     <div class="container-alternate" id="select_container">
       <div class="container">
+        <div class="row">
+          <h3 class="subhead title-text">O que você gostaria de descartar?</h3>
+        </div>
         <div class="row">
           <div class="col-md-12">
               <input id="select_query">
@@ -83,16 +86,9 @@
 
     <div class="container">
       <div class="row about">
-        <div class="col-md-10 col-md-offset-1 text-center">
-        <h3 id="about" class="subhead">Como descartar [item] em porto alegre?</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna.  Ut wisi
-          enim ad minim veniam, quis nostrud exerci tation ullamcorper
-          suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
-          autem vel eum iriure dolor in hendrerit in vulputate velit esse
-          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-          vero eros et accumsan.
+        <div id="how-to-discard" class="col-md-10 col-md-offset-1 text-center">
+        <h3 id="item-title" class="subhead">Como descartar <span id="item-name">[item]</span> em Porto Alegre?</h3>
+        <p id="item-information">
         </p>
         </div> <!-- /.col-md-12 -->
       </div> <!-- /.row -->
@@ -102,7 +98,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div id="tour" class="carousel slide">    
+            <div id="tour">
             </div> <!-- #tour -->
           </div> <!-- /.col-md-12 -->
         </div> <!-- /.row -->
@@ -148,6 +144,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="select2-3.4.5/select2.js"></script>
     <script src="http://openlayers.org/api/OpenLayers.js"></script>
+    <script src="js/map.js"></script>
     <script src="api.js"></script>
     <script>
       $(".nav-link").click(function(e) {
