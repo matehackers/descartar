@@ -70,7 +70,7 @@ function pontosToPositions(pontos){
 
 
 
-function adicionaMarcadoresNaLayer(layerMarcadores,positions){
+function adicionaMarcadoresNaLayer(layerMarcadores, positions){
     var size = new OpenLayers.Size(21,25);
     var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
     var icon;
@@ -81,7 +81,7 @@ function adicionaMarcadoresNaLayer(layerMarcadores,positions){
     }
 }
 
-function obtemLatitudesCsvERenderizaNoMapa(pathJson,map,zoom){
+function obtemLatitudesERenderizaNoMapa(pathJson, zoom){
     var pontos = new Array();
     var positions;
 
@@ -89,26 +89,13 @@ function obtemLatitudesCsvERenderizaNoMapa(pathJson,map,zoom){
     var layerMarcadores = new OpenLayers.Layer.Markers( "Markers" );
     map.addLayer(layerMarcadores);
 
-    //pontos para teste (6 primeiras lat,long de oleos.json)
-    /*
-    pontos[0]= new coordenada(-30.047009708,-51.2172603422);
-    pontos[1]= new coordenada(-30.0494363151,-51.213368848);
-    pontos[2]= new coordenada(-30.028117645,-51.168128152);
-    pontos[3]= new coordenada(-30.2060986637,-51.1793673208);
-    pontos[4]= new coordenada(-30.1157345234,-51.1788731001);
-    pontos[5]= new coordenada(-30.0345027779,-51.2110262746);
-    pontos[6]= new coordenada(-30.0477696456,-51.1549648444);
-    */
-
     $.getJSON(pathJson,function(result){
         $.each(result, function(key, field){
-            //console.debug(field);
             //adiciona cada ponto do json no array de pontos
             pontos.push(new coordenada(field.latitude,field.longitude));
-
         });
 
-        positions=pontosToPositions(pontos); 
+        positions=pontosToPositions(pontos);
         adicionaMarcadoresNaLayer(layerMarcadores,positions);
 
         posicaoCentro=pontoToPosition(obtemCoordenadaCentro(pontos));
@@ -120,9 +107,7 @@ function obtemLatitudesCsvERenderizaNoMapa(pathJson,map,zoom){
 }
 
 $(document).ready(function(){
-    var zoom = 13;
     map = new OpenLayers.Map("tour");
     var mapnik = new OpenLayers.Layer.OSM();
     map.addLayer(mapnik);
-    obtemLatitudesCsvERenderizaNoMapa('data/pilhas.json', map, zoom);
 });

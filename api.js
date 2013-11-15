@@ -1,3 +1,11 @@
+function load_page () {
+
+  $("#select_query").select2({
+    width: "element",
+    data: select_options()
+  });
+}
+
 $(document).ready(function() {
 
   load_page();
@@ -10,37 +18,36 @@ $(document).ready(function() {
 
 function tires()
 {
-  alert("Pneus");
+  obtemLatitudesERenderizaNoMapa('data/pneus.json', 13);
 }
 
 function oil()
 {
-  alert("oil");
+  obtemLatitudesERenderizaNoMapa('data/oleo.json', 13);
 }
 
 function electronics()
 {
-  alert("Eletrônicos");
+  obtemLatitudesERenderizaNoMapa('data/eletronicos.json', 13);
 }
 
 function batteries()
 {
-  alert("Batteries");
+  obtemLatitudesERenderizaNoMapa('data/pilhas.json', 13);
 }
 
 function where_bought()
 {
-  alert("Where bought");
 }
 
 function medicine()
 {
-  alert("Medicine");
+  obtemLatitudesERenderizaNoMapa('data/remedios.json', 13);
 }
 
 function ecopoint()
 {
-  alert("Ecopoint");
+  obtemLatitudesERenderizaNoMapa('data/ecopontos.json', 13);
 }
 
 residue_options = {
@@ -74,30 +81,4 @@ function select_options() {
   }
 
   return opt;
-}
-
-function load_page () {
-
-  var map = new OpenLayers.Map("tour");
-  map.addLayer(new OpenLayers.Layer.OSM());
-  map.zoomToMaxExtent();
-
-  $("#select_query").select2({
-    width: "element",
-    data: select_options()
-  });
-
-  // var data = {
-  //     resource_id: '3076913f-38dd-4634-b26e-305c80d88576', // the resource id
-  //     limit: 5,
-  //   };
-  //   $.ajax({
-  //     url: 'http://datapoa.com.br/api/action/datastore_search',
-  //     data: data,
-  //     dataType: 'jsonp',
-  //     success: function(data) {
-  //       console.debug(data);
-  //     }
-  // }); 
- 
 }
