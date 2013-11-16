@@ -55,6 +55,8 @@ function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson){
         //console.debug(dadosJson[i]);
         var marker =new OpenLayers.Marker(dadosJson[i].smpPosition,icon);        
         icon.imageDiv.dados=dadosJson[i]; //salva dados no proprio objeto
+        //icon.dialog= $('.dialog').dialog();
+        console.debug(icon);
         
         $(icon.imageDiv).click(function(){
         	alert('Nome: '+this.dados.nome+'\nEndereco: '+this.dados.endereco); //exibe dados salvos no objeto
@@ -75,7 +77,7 @@ function obtemDadosJsonERenderizaNoMapa(pathJson,zoom){
     
     //layer para marcadores(pontos)
     var layerMarcadores = new OpenLayers.Layer.Markers( "Markers" );
-    map.addLayer(layerMarcadores);       
+    map.addLayer(layerMarcadores);      
     
         
     $.getJSON(pathJson,function(result){
@@ -83,6 +85,7 @@ function obtemDadosJsonERenderizaNoMapa(pathJson,zoom){
         	//console.debug(field);
         	//adiciona cada entrada do json no array de dados        	
         	dadosJson.push(field);
+        	
         });
         
         adicionaSmpPositions(dadosJson);        
@@ -98,12 +101,21 @@ function obtemDadosJsonERenderizaNoMapa(pathJson,zoom){
 function obtemLatitudesERenderizaNoMapa(pathJson, zoom){
 	obtemDadosJsonERenderizaNoMapa(pathJson,zoom);	
 }
+
+function posicionaMapaPoa(){
+	var latPoa=-30.0331;
+	var longiPoa=-51.2300;
+	var posicaoPoa=criaSmpPosition(latPoa,longiPoa);
+	map.setCenter(posicaoPoa,12);
+	
+}
 	
 $(document).ready(function(){	
 
     map = new OpenLayers.Map("tour");
     var mapnik = new OpenLayers.Layer.OSM();
     map.addLayer(mapnik);
+    posicionaMapaPoa();
     
     
 });
