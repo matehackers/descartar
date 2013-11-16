@@ -54,12 +54,18 @@ function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson){
         icon = new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png', size, offset);
         //console.debug(dadosJson[i]);
         var marker =new OpenLayers.Marker(dadosJson[i].smpPosition,icon);        
-        icon.imageDiv.dados=dadosJson[i]; //salva dados no proprio objeto
-        //icon.dialog= $('.dialog').dialog();
-        console.debug(icon);
-        
+        icon.imageDiv.dados=dadosJson[i]; //salva dados no proprio objeto        
+        console.debug(dadosJson[i]);
         $(icon.imageDiv).click(function(){
-        	alert('Nome: '+this.dados.nome+'\nEndereco: '+this.dados.endereco); //exibe dados salvos no objeto
+        	
+        	tituloDialogo=this.dados.nome;
+        	conteudoDialogo='Endereco: '+this.dados.rua+'<br>Bairro: '+this.dados.bairro;
+        	
+        	
+        	$('body').append('<div id="'+this._eventCacheID+'_diag" title="'+tituloDialogo+'" >'+conteudoDialogo+' </div>');        	
+        	
+        	$('#'+this._eventCacheID+'_diag').dialog({modal: true});//cria objeto dialogo
+        	$('.ui-front').css('z-index','999999'); //altera o z-index da dialog, para o mapa nao ficar na frente
         	
         });
         layerMarcadores.addMarker(marker);
@@ -79,12 +85,13 @@ function obtemDadosJsonERenderizaNoMapa(pathJson,zoom){
     var layerMarcadores = new OpenLayers.Layer.Markers( "Markers" );
     map.addLayer(layerMarcadores);      
     
-        
+    
     $.getJSON(pathJson,function(result){
         $.each(result, function(key, field){        	
         	//console.debug(field);
         	//adiciona cada entrada do json no array de dados        	
         	dadosJson.push(field);
+        	
         	
         });
         
@@ -116,6 +123,6 @@ $(document).ready(function(){
     var mapnik = new OpenLayers.Layer.OSM();
     map.addLayer(mapnik);
     posicionaMapaPoa();
-    
+        
     
 });
