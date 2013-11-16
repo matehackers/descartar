@@ -1,113 +1,141 @@
 /**
- * Script para execucao das funcoes javascript após todos os componentes html
- * já estarem carregados.
- * 
+ * Interface para obtencao do json, e renderizacao das latitudes no mapa
  * 
  */
 
-function coordenada(lat,lon){
-    // ponto = coordenada
-    this.latitude=lat;
-    this.longitude=lon;
-}
 
-function obtemCoordenadaCentro(pontos){
-    //dado um conjunto de pontos, retorna um unico ponto
-    //localizado no centro desse conjunto.
-
-    var latMedia,longiMedia,latMax,longiMax,latMin,longiMin;
-    latMax=-9999999999;
-    latMin= 999999999;
-
-    longiMax=-9999999999;
-    longiMin= 999999999;
-
-    latMedia=-99999999999;
-    longiMedia=-9999999999;
-
-
-    for(var i=0;i<pontos.length;i++){
-        if(pontos[i].latitude < latMin) latMin = pontos[i].latitude;        
-        if(pontos[i].latitude > latMax) latMax = pontos[i].latitude;
-        if(pontos[i].longitude < longiMin) longiMin = pontos[i].longitude;
-        if(pontos[i].longitude > longiMax) longiMax = pontos[i].longitude;
-        
-        if(Math.abs(latMedia-(latMax+latMin)/2) > Math.abs(pontos[i].latitude - (latMax+latMin)/2))
-            latMedia=pontos[i].latitude;
-        
-        if (Math.abs(longiMedia-(longiMax+longiMin)/2) > Math.abs(pontos[i].longitude-(longiMax+longiMin)/2))                    
-            longiMedia=pontos[i].longitude;
-        
-    }
-
-    return new coordenada(latMedia,longiMedia);
-
-}
-
-function pontoToPosition(ponto){
-    var positions=new Array();
-    var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transforma de WGS 1984
-    var toProjection   = new OpenLayers.Projection("EPSG:900913"); // para Spherical Mercator Projection   
-
-    position = new OpenLayers.LonLat(ponto.longitude, ponto.latitude).transform( fromProjection, toProjection);
-
-    return position;
-}
-
-
-function pontosToPositions(pontos){
-    //transforma array de pontos/coordenadas (lat,long) em uma 'position' (formato SPM)
-
-    var positions=new Array();
-    var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transforma de WGS 1984
+function criaSmpPosition(latitude,longitude){
+	//dada uma latitude/longitude WGS, converte para SMP
+	
+	var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transforma de WGS 1984
     var toProjection   = new OpenLayers.Projection("EPSG:900913"); // para Spherical Mercator Projection
+    return new OpenLayers.LonLat(longitude, latitude).transform( fromProjection, toProjection);	
+	
+}
 
-    for(var i=0;i<pontos.length;i++)
-        positions[i] = new OpenLayers.LonLat(pontos[i].longitude, pontos[i].latitude).transform( fromProjection, toProjection);
+function obtemPosicaoCentro(dadosJson){
 
-    return positions;
+	//dado um conjunto de dados no formato json, retorna um unico ponto (no formato SMP)
+	//representando o centro das latitudes/longitudes desses dados.
+	//<Media aritimetica>
+	
+	var latMedia=0;
+	var longiMedia=0;
+	
+	
+	for(var i=0;i<dadosJson.length;i++){
+		latMedia+=dadosJson[i].latitude;
+		longiMedia+=dadosJson[i].longitude;
+	}
+	
+	latMedia=latMedia/dadosJson.length;
+	longiMedia=longiMedia/dadosJson.length;
+	
+	return criaSmpPosition(latMedia,longiMedia);
+	
+}
+
+function adicionaSmpPositions(dadosJson){	
+	//Dado o array que representa o json, adiciona mais um atributo (posicao Smp) em cada campo do json.    
+    for(var i=0;i<dadosJson.length;i++)
+        dadosJson[i].smpPosition = criaSmpPosition(dadosJson[i].latitude,dadosJson[i].longitude);
+    
 }
 
 
-
-function adicionaMarcadoresNaLayer(layerMarcadores, positions){
-    var size = new OpenLayers.Size(21,25);
+function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson){
+    
+    var size = new OpenLayers.Size(21,25); 
     var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
     var icon;
-
-    for(var i=0;i<positions.length;i++){
+    
+    
+    for(var i=0;i<dadosJson.length;i++){   
         icon = new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png', size, offset);
-        layerMarcadores.addMarker(new OpenLayers.Marker(positions[i],icon)); 
+        //console.debug(dadosJson[i]);
+        var marker =new OpenLayers.Marker(dadosJson[i].smpPosition,icon);        
+        icon.imageDiv.dados=dadosJson[i]; //salva dados no proprio objeto
+        $(icon.imageDiv).click(function(){
+        	
+        	tituloDialogo=this.dados.nome;
+        	conteudoDialogo='Endereco: '+this.dados.rua+'<br>Bairro: '+this.dados.bairro;
+        	
+        	bootStrapModal='<div class="modal fade" id="'+this._eventCacheID+'_modal">\
+          	  <div class="modal-dialog">\
+          	    <div class="modal-content">\
+          	      <div class="modal-header">\
+          	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>\
+          	        <h4 class="modal-title">'+tituloDialogo+'</h4>\
+          	      </div>\
+          	      <div class="modal-body">\
+          	        <p>'+conteudoDialogo+'</p>\
+          	      </div>\
+          	      <div class="modal-footer">\
+          	        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>\
+        		 </div>\
+          	    </div>\
+          	  </div>\
+          	</div>';
+
+        	$('body').append(bootStrapModal);        	
+        	$('#'+this._eventCacheID+'_modal').modal('show');
+        	
+        });
+        layerMarcadores.addMarker(marker);
+        
+        
     }
 }
 
-function obtemLatitudesERenderizaNoMapa(pathJson, zoom){
-    var pontos = new Array();
-    var positions;
-
+function obtemDadosJsonERenderizaNoMapa(pathJson,zoom){
+	//antiga obtemLatitudesCsvERenderizaNoMapa(..)
+	    
+	var pontos = new Array();
+    var dadosJson = new Array();    
+    
+    
     //layer para marcadores(pontos)
     var layerMarcadores = new OpenLayers.Layer.Markers( "Markers" );
-    map.addLayer(layerMarcadores);
-
+    map.addLayer(layerMarcadores);      
+    
+    
     $.getJSON(pathJson,function(result){
-        $.each(result, function(key, field){
-            //adiciona cada ponto do json no array de pontos
-            pontos.push(new coordenada(field.latitude,field.longitude));
+        $.each(result, function(key, field){        	
+        	//console.debug(field);
+        	//adiciona cada entrada do json no array de dados        	
+        	dadosJson.push(field);
+        	
+        	
         });
-
-        positions=pontosToPositions(pontos);
-        adicionaMarcadoresNaLayer(layerMarcadores,positions);
-
-        posicaoCentro=pontoToPosition(obtemCoordenadaCentro(pontos));
-
-        console.debug(posicaoCentro)
-        map.setCenter(posicaoCentro, zoom);
-
-     });
+        
+        adicionaSmpPositions(dadosJson);        
+        adicionaMarcadoresNaLayer(layerMarcadores,dadosJson);        
+        posicaoCentro=obtemPosicaoCentro(dadosJson);        
+        map.setCenter(posicaoCentro, zoom);        
+        
+     });   
+	       
 }
 
-$(document).ready(function(){
+//manter a portabilidade com o html atual
+function obtemLatitudesERenderizaNoMapa(pathJson, zoom){
+	obtemDadosJsonERenderizaNoMapa(pathJson,zoom);	
+}
+
+function posicionaMapaPoa(){
+	var latPoa=-30.0331;
+	var longiPoa=-51.2300;
+	var posicaoPoa=criaSmpPosition(latPoa,longiPoa);
+	map.setCenter(posicaoPoa,12);
+	
+}
+	
+$(document).ready(function(){	
+
     map = new OpenLayers.Map("tour");
     var mapnik = new OpenLayers.Layer.OSM();
     map.addLayer(mapnik);
+    posicionaMapaPoa();
+        
+    
 });
