@@ -60,7 +60,7 @@ function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson){
         	tituloDialogo=this.dados.nome;
         	conteudoDialogo='Endereco: '+this.dados.rua+'<br>Bairro: '+this.dados.bairro;
         	
-        	bootStrapModal='<div class="modal fade" id="'+this._eventCacheID+'_modal">\
+        	bootStrapModal='<div class="modal fade" id="_modal_info">\
           	  <div class="modal-dialog">\
           	    <div class="modal-content">\
           	      <div class="modal-header">\
@@ -77,22 +77,36 @@ function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson){
           	  </div>\
           	</div>';
 
-        	$('body').append(bootStrapModal);        	
-        	$('#'+this._eventCacheID+'_modal').modal('show');
+        	$('body').append(bootStrapModal);//adiciona DOM da modal
+        	
+        	$('#_modal_info').modal('show'); //exibe-a
+        	
+        	//vincula evento que remove o DOM criado ao fecharmos a modal
+        	$('#_modal_info').on('hidden.bs.modal', function () {
+        		this.remove(); //remove dom desse elemento
+        		
+        	});
         	
         });
-        layerMarcadores.addMarker(marker);
-        
+        layerMarcadores.addMarker(marker);       
         
     }
+}
+
+function resetaMapa(){
+	map.destroy();
+    map = new OpenLayers.Map("tour");
+    var mapnik = new OpenLayers.Layer.OSM();
+    map.addLayer(mapnik);	
 }
 
 function obtemDadosJsonERenderizaNoMapa(pathJson,zoom){
 	//antiga obtemLatitudesCsvERenderizaNoMapa(..)
 	    
 	var pontos = new Array();
-    var dadosJson = new Array();    
+    var dadosJson = new Array();
     
+    resetaMapa();
     
     //layer para marcadores(pontos)
     var layerMarcadores = new OpenLayers.Layer.Markers( "Markers" );
@@ -133,7 +147,7 @@ function posicionaMapaPoa(){
 $(document).ready(function(){	
 
     map = new OpenLayers.Map("tour");
-    var mapnik = new OpenLayers.Layer.OSM();
+    mapnik = new OpenLayers.Layer.OSM();
     map.addLayer(mapnik);
     posicionaMapaPoa();
         
