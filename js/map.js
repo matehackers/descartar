@@ -58,7 +58,7 @@ function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson){
         $(icon.imageDiv).click(function(){
         	
         	tituloDialogo=this.dados.nome;
-        	conteudoDialogo='Endereco: '+this.dados.rua+'<br>Bairro: '+this.dados.bairro;
+        	conteudoDialogo='Endereco: '+this.dados.endereco+'<br>Bairro: '+this.dados.bairro;
         	
         	bootStrapModal='<div class="modal fade" id="_modal_info">\
           	  <div class="modal-dialog">\
