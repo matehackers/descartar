@@ -42,8 +42,34 @@ function adicionaSmpPositions(dadosJson){
     
 }
 
+function obtemConteudoDialogoApartirFormatoJson(pathJson,dados){
+	
+	dadosFormatados='';
 
-function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson){
+	if(dados.endereco && dados.endereco != '')
+		dadosFormatados += 'Endereço: '+dados.endereco
+	else if(dados.rua && dados.rua != '' )
+		dadosFormatados += 'Endereço: '+dados.rua
+	else if(dados.endereço && dados.endereço != '')
+		dadosFormatados += 'Endereço: '+dados.endereço
+
+	if(dados.cep && dados.cep != '')
+		dadosFormatados += '<br>Cep: '+dados.cep
+	if(dados.bairro && dados.bairro != '')
+		dadosFormatados += '<br>Bairro: '+dados.bairro
+	if(dados.telefone && dados.telefone != '')
+		dadosFormatados += '<br>Telefone: '+dados.telefone
+	if(dados.horario && dados.horario != '')
+		dadosFormatados += '<br>Horários: '+dados.horario
+	if(dados.residuos && dados.residuo != '')
+		dadosFormatados += '<br>Residuos: '+dados.residuos
+	if(dados.empresa_coletora && dados.empresa_coletora != '')
+		dadosFormatados += '<br>Empresa coletora: '+dados.empresa_coletora
+	return dadosFormatados;
+	
+}
+
+function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson,pathJson){
     
     var size = new OpenLayers.Size(21,25); 
     var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
@@ -58,7 +84,7 @@ function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson){
         $(icon.imageDiv).click(function(){
         	
         	tituloDialogo=this.dados.nome;
-        	conteudoDialogo='Endereco: '+this.dados.endereco+'<br>Bairro: '+this.dados.bairro;
+        	conteudoDialogo=obtemConteudoDialogoApartirFormatoJson(pathJson,this.dados);        	
         	
         	bootStrapModal='<div class="modal fade" id="_modal_info">\
           	  <div class="modal-dialog">\
@@ -123,7 +149,7 @@ function obtemDadosJsonERenderizaNoMapa(pathJson,zoom){
         });
         
         adicionaSmpPositions(dadosJson);        
-        adicionaMarcadoresNaLayer(layerMarcadores,dadosJson);        
+        adicionaMarcadoresNaLayer(layerMarcadores,dadosJson,pathJson); //passo o path, para sabermos o formato dos dados         
         posicaoCentro=obtemPosicaoCentro(dadosJson);        
         map.setCenter(posicaoCentro, zoom);        
         
