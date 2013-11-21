@@ -18,22 +18,22 @@ $(document).ready(function() {
 
 function tires()
 {
-  obtemLatitudesERenderizaNoMapa('data/pneus.json', 13);
+  obtemLatitudesERenderizaNoMapa('data/pneus.json');
 }
 
 function oil()
 {
-  obtemLatitudesERenderizaNoMapa('data/oleo.json', 13);
+  obtemLatitudesERenderizaNoMapa('data/oleo.json');
 }
 
 function electronics()
 {
-  obtemLatitudesERenderizaNoMapa('data/eletronicos.json', 13);
+  obtemLatitudesERenderizaNoMapa('data/eletronicos.json');
 }
 
 function batteries()
 {
-  obtemLatitudesERenderizaNoMapa('data/pilhas.json', 13);
+  obtemLatitudesERenderizaNoMapa('data/pilhas.json');
 }
 
 function where_bought()
@@ -42,12 +42,12 @@ function where_bought()
 
 function medicine()
 {
-  obtemLatitudesERenderizaNoMapa('data/remedios.json', 13);
+  obtemLatitudesERenderizaNoMapa('data/remedios.json');
 }
 
 function ecopoint()
 {
-  obtemLatitudesERenderizaNoMapa('data/ecopontos.json', 13);
+  obtemLatitudesERenderizaNoMapa('data/ecopontos.json');
 }
 
 residue_options = {

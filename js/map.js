@@ -126,7 +126,7 @@ function resetaMapa(){
     map.addLayer(mapnik);	
 }
 
-function obtemDadosJsonERenderizaNoMapa(pathJson,zoom){
+function obtemDadosJsonERenderizaNoMapa(pathJson){
 	//antiga obtemLatitudesCsvERenderizaNoMapa(..)
 	    
 	var pontos = new Array();
@@ -149,17 +149,18 @@ function obtemDadosJsonERenderizaNoMapa(pathJson,zoom){
         });
         
         adicionaSmpPositions(dadosJson);        
-        adicionaMarcadoresNaLayer(layerMarcadores,dadosJson,pathJson); //passo o path, para sabermos o formato dos dados         
-        posicaoCentro=obtemPosicaoCentro(dadosJson);        
-        map.setCenter(posicaoCentro, zoom);        
+        adicionaMarcadoresNaLayer(layerMarcadores,dadosJson,pathJson); //passo o path, para sabermos o formato dos dados 
+        var limitesDoMapa = layerMarcadores.getDataExtent();
+   		map.zoomToExtent(limitesDoMapa);        
+        
         
      });   
 	       
 }
 
 //manter a portabilidade com o html atual
-function obtemLatitudesERenderizaNoMapa(pathJson, zoom){
-	obtemDadosJsonERenderizaNoMapa(pathJson,zoom);	
+function obtemLatitudesERenderizaNoMapa(pathJson){
+	obtemDadosJsonERenderizaNoMapa(pathJson);
 }
 
 function posicionaMapaPoa(){
