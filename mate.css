@@ -1,6 +1,12 @@
 #tour{
+
+
   height: 500px;
+  width: 50%;
+  float: right;
 }
+
+
 
 #select_query{
   width: 100%;
@@ -12,4 +18,10 @@
 
 #select_container {
   padding: 50px
+}
+
+.thumbnail img{
+	position:relative;	
+	
+
 }
