@@ -6,7 +6,18 @@
   float: right;
 }
 
+.go-away-right {
+  margin-right: 1em;
+}
 
+.select2-container .select2-choice { 
+  height: 3em;
+  padding-top: 0.3em; 
+}
+
+.input_height {
+  heigh: 200px;
+}
 
 #select_query{
   width: 100%;

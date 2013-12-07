@@ -1,9 +1,17 @@
 function load_page () {
+  
+  function format(state) {
+    return '<button type="button" class="btn btn-default btn-sm go-away-right"><span class="glyphicon glyphicon-' + state.glyph + '"></span></button>' + state.text; 
+  };
 
   $("#select_query").select2({
     width: "element",
-    data: select_options()
+    data: select_options(),
+    formatResult: format,
+    formatSelection: format,
+    escapeMarkup: function(m) { return m; }
   });
+
 }
 
 $(document).ready(function() {
@@ -71,12 +79,33 @@ residue_options = {
   "Resíduos arbóreos" : ecopoint
 }
 
+residue_glyphs = {
+  "Pilhas e Baterias" : "search",
+  "Eletrônicos" : "search",
+  "Óleo de Cozinha" : "search",
+  "Remédios" : "search",
+  "Lâmpadas" : "search",
+  "Pneus" : "search",
+  "Madeiras" : "search",
+  "Latas com resto de Tinta" : "search",
+  "Móveis" : "search",
+  "Colchôes" : "search",
+  "Terra" : "search",
+  "Madeiras" : "search",
+  "Entulhos" : "search",
+  "Caliça" : "search",
+  "Cerâmica" : "search",
+  "Sucatas de ferro" : "search",
+  "Eletrodomésticos" : "search",
+  "Resíduos arbóreos" : "search"
+}
+
 function select_options() {
   var opt = [];
   var i = 0;
 
   for (o in residue_options) {
-    opt.push( {id: i, text: o} )
+    opt.push( { id: i, text: o, glyph: residue_glyphs[o] } )
     i += 1;
   }
 
