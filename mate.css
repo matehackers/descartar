@@ -1,15 +1,13 @@
 #tour{
-
-
-  height: 500px;
-  width: 50%;
-  float: right;
+  height: 465px;
 }
-
-
 
 #select_query{
   width: 100%;
+}
+
+.container-alternate {
+    padding-bottom: 35px;
 }
 
 .container-alternate, .jumbotron, footer {
@@ -17,11 +15,9 @@
 }
 
 #select_container {
-  padding: 50px
+  padding: 20px
 }
 
 .thumbnail img{
-	position:relative;	
-	
-
+  position:relative;
 }
