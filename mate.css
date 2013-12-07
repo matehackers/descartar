@@ -1,5 +1,11 @@
-#tour{
+#tour {
   height: 465px;
+}
+
+@media screen and (max-width: 780px) {
+    #tour {
+      height: 365px;
+    }
 }
 
 #select_query{
