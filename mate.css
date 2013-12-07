@@ -1,9 +1,5 @@
-#tour{
-
-
-  height: 500px;
-  width: 50%;
-  float: right;
+#tour {
+  height: 465px;
 }
 
 .go-away-right {
@@ -15,12 +11,17 @@
   padding-top: 0.3em; 
 }
 
-.input_height {
-  heigh: 200px;
-}
+@media screen and (max-width: 780px) {
+    #tour {
+      height: 365px;
+    }
 
 #select_query{
   width: 100%;
+}
+
+.container-alternate {
+    padding-bottom: 35px;
 }
 
 .container-alternate, .jumbotron, footer {
@@ -28,11 +29,9 @@
 }
 
 #select_container {
-  padding: 50px
+  padding: 20px
 }
 
 .thumbnail img{
-	position:relative;	
-	
-
+  position:relative;
 }
