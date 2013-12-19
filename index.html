@@ -2,18 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>matehackers.org  </title>    
+    <title>matehackers.org  </title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="js/select/select2.css" rel="stylesheet"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="css/lighter.css" rel="stylesheet">
     <link href="css/mate.css" rel="stylesheet">
-    
-    
+
 </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -21,7 +20,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand nav-link" href="#top">#matehackers</a>
+          <a class="navbar-brand nav-link" href="http://matehackers.org">#matehackers</a>
         </div> <!-- /.navbar-header -->
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -36,9 +35,9 @@
 
     <div id="top" class="jumbotron">
       <div class="container">
-        <img src="LOGO_PAPA_TUDO.png" alt="yum..">
-        <h1>Separando e cantando</a></h1>
-        <h2>Descubra onde descartar qualquer resíduo na cidade de Porto Alegre</h2>
+        <img src="img/LOGO_PAPA_TUDO.png" alt="yum..">
+        <h1>Descartar.net</a></h1>
+        <h3>Descubra onde descartar qualquer resíduo na cidade de Porto Alegre</h3>
         <!-- <p><a class="btn btn-primary btn-lg">Sign Up Today <span class="glyphicon glyphicon-circle-arrow-right"></span></a></p> -->
       </div> <!-- /.container -->
     </div> <!-- /.jumbotron -->
@@ -48,7 +47,7 @@
       <div class="row benefits">
         <div class="col-md-4 col-sm-6 benefit">
           <div class="benefit-ball">
-            <span class="glyphicon glyphicon-home"></span>
+            <span class="glyphicon glyphicon-search"></span>
           </div>
           <h3>Passo 1:</h3>
           <p>Digite o nome do produto que deseja descartar.</p>
@@ -56,7 +55,7 @@
 
         <div class="col-md-4 col-sm-6 benefit">
           <div class="benefit-ball">
-            <span class="glyphicon glyphicon-cloud"></span>
+            <span class="glyphicon glyphicon-map-marker"></span>
           </div>
           <h3>Passo 2:</h3>
           <p>Leia as informações.</p>
@@ -64,7 +63,7 @@
 
         <div class="col-md-4 col-sm-6 benefit">
           <div class="benefit-ball">
-            <span class="glyphicon glyphicon-bell"></span>
+            <span class="glyphicon glyphicon-trash"></span>
           </div>
           <h3>Passo 3:</h3>
           <p>Descarte o seus resíduos da maneira mais correta.</p>
@@ -78,7 +77,7 @@
           <h3 class="subhead title-text">O que você gostaria de descartar?</h3>
         </div>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12">
               <input id="select_query">
               </input>
           </div>
@@ -99,29 +98,31 @@
     <div class="container-alternate">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <div id="tour">
-            </div> <!-- #tour -->
-          </div> <!-- /.col-md-12 -->
-
+         
           <!-- Pilha -->
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-sm-12 col-md-6">
-                <div class="thumbnail">
-                  <img src="img/pilha.jpg">
-                  <div class="caption">
-                    <h3>Pilhas</h3>
-                    <p>Para realizar o descarte de pilhas devemos, primeiramente, tomar cuidado ao manuseá-las: Caso haja vazamentos ou indícios de ferrugem, é necessário utilizar uma luva de proteção, um jornal, ou...</p>        
-                  </div>
+          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" id="containerPilha">
+              <div class="thumbnail">              
+                <div class="row text-center">
+                  <!--icone -->
+                  <span class="fa-stack fa-lg fa-5x">
+                    <i class="fa fa-circle fa-stack-2x "></i> <!-- circulo fundo -->
+                    <i class=" fa fa-search fa-stack-1x fa-inverse" id="icone"></i>
+                  </span>
+
                 </div>
-              </div>
+                <div class="caption">
+                  <h3>Informações</h3>
+                  <p>Após selecionar o tipo de resíduo, observe os pontos de coleta no mapa ao lado. Clicando nos pontos do mapa, é possível obter informações detalhadas sobre cada ponto de coleta.</p>
+                </div>
             </div>
+          </div>
 
-
-
-
-        </div> <!-- /.row -->
+          <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+            <div id="tour_container">
+              <div id="tour"> </div> <!-- #tour -->
+            </div>
+          </div> <!-- /.col-md-12 -->
+        </div>
       </div> <!-- /.container -->
     </div>
 
@@ -130,39 +131,60 @@
       <div class="row about">
         <div class="col-md-10 col-md-offset-1 text-center">
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna.  Ut wisi
-            enim ad minim veniam, quis nostrud exerci tation ullamcorper
-            suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
-            autem vel eum iriure dolor in hendrerit in vulputate velit esse
-            molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-            vero eros et accumsan.
+             <u>Hackerspace = espaço + hackers</u><br>
+
+Somos um grupo de entusiastas por tecnologia e conhecimento chamado Matehackers. <br>Nós acreditamos que o conhecimento é um direito básico e universal. A livre troca de idéias e o incentivo a concretizar os seus projetos é premissa básica da existencia do Matehackers.
+
+<br>Por isso oferecemos um espaço - um Hackerspace - para reunir toda esta gente. Um espaço livre onde qualquer um possa ir a qualquer momento e trabalhar em projetos de qualquer tipo, relacionados a tecnologia. 
           </p>
           <p>
-            Nam liber tempor cum soluta nobis eleifend option congue nihil
-            imperdiet doming id quod mazim placerat facer possim assum. Typi non
-            habent claritatem insitam; est usus legentis in iis qui facit eorum
-            claritatem. Investigationes demonstraverunt lectores legere me lius
-            quod ii legunt saepius.
+           O Matehackers está fisicamente localizado dentro do Bunker 360 em Porto Alegre. 
           </p>
+          
+          
+         
+          
         </div> <!-- /.col-md-10 -->
       </div> <!-- /.row -->
     </div> <!-- /.container -->
 
     <footer>
       <div class="container clearfix">
-        <p class="pull-left">
-          Copyleft &copy; #matehackers 2013
-        </p>
-        <p class="pull-right">
-          a template from <a href="http://coverstrap.com">Coverstrap</a>
-        </p>
+
+        <div class="row">
+          <div class="col-md-4 text-center"> <!-- col1-->
+            <p  style="color:#222222;">
+              Copyleft &copy; <a href="http://matehackers.org" style="color:#222222;">#matehackers 2013</a>
+            </p>
+          </div>
+
+          <div class="col-md-4 text-center"> <!-- col2-->
+            <!-- face -->
+              <div id="fb-root"></div>
+              <script>
+                  (function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) return;
+                      js = d.createElement(s); js.id = id;
+                      js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+                      fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));
+                </script>
+                <div class="fb-share-button" data-href="http://www.matehackers.org" data-type="button_count"></div>
+            <!-- -->
+          </div>
+
+        <div class="col-md-4 text-center"><!-- col3-->
+          <p>
+            a template from <a href="http://coverstrap.com" style="color: #222222;">Coverstrap</a>
+          </p>
+        </div>
       </div> <!-- /.container -->
     </footer>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="select2-3.4.5/select2.js"></script>
+    <script src="js/select/select2.js"></script>
     <script src="http://openlayers.org/api/OpenLayers.js"></script>
     <script src="js/map.js"></script>
     <script src="js/api.js"></script>
@@ -175,5 +197,6 @@
         link.closest(".navbar").find(".navbar-toggle:not(.collapsed)").clit ck();
       });
     </script>
+
   </body>
 </html>
