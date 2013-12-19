@@ -1,15 +1,32 @@
-#tour{
 
+#tour {
+  height: 465px;
+  border-radius:5px;
+  overflow:hidden;
 
-  height: 500px;
-  width: 50%;
-  float: right;
 }
 
+.go-away-right {
+  margin-right: 1em;
+}
 
+.select2-container .select2-choice {
+  font-size: 2em;
+  height: 1.5em;
+  line-height: 1.5em;    
+}
 
+@media screen and (max-width: 780px) {
+    #tour {
+      height: 365px;
+    }
+}
 #select_query{
   width: 100%;
+}
+
+.container-alternate {
+    padding-bottom: 35px;
 }
 
 .container-alternate, .jumbotron, footer {
@@ -17,11 +34,28 @@
 }
 
 #select_container {
-  padding: 50px
+  padding: 20px
 }
 
 .thumbnail img{
-	position:relative;	
-	
+  position:relative;
+}
 
+/*
+.thumbnail i {
+  position: relative;
+  padding-top: 20px;
+  padding-left: 95px;
+  float: center;
+}*/
+
+
+/*cartilha*/
+.thumbnail{  
+    height: 465px;
+}
+
+.btn{
+
+  border-radius:5px;
 }
