@@ -1,5 +1,9 @@
+
 #tour {
   height: 465px;
+  border-radius:5px;
+  overflow:hidden;
+
 }
 
 .go-away-right {
@@ -7,15 +11,16 @@
 }
 
 .select2-container .select2-choice {
-  height: 3em;
-  padding-top: 0.3em; 
+  font-size: 2em;
+  height: 1.5em;
+  line-height: 1.5em;    
 }
 
 @media screen and (max-width: 780px) {
     #tour {
       height: 365px;
     }
-
+}
 #select_query{
   width: 100%;
 }
@@ -34,4 +39,18 @@
 
 .thumbnail img{
   position:relative;
+}
+
+/*
+.thumbnail i {
+  position: relative;
+  padding-top: 20px;
+  padding-left: 95px;
+  float: center;
+}*/
+
+
+/*cartilha*/
+.thumbnail{  
+    height: 465px;
 }

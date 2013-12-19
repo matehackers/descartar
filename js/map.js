@@ -47,24 +47,24 @@ function obtemConteudoDialogoApartirFormatoJson(pathJson,dados){
 	dadosFormatados='';
 
 	if(dados.endereco && dados.endereco != '')
-		dadosFormatados += 'Endereço: '+dados.endereco
+		dadosFormatados += '<b>Endereço:</b> '+dados.endereco
 	else if(dados.rua && dados.rua != '' )
-		dadosFormatados += 'Endereço: '+dados.rua
+		dadosFormatados += '<b>Endereço:</b> '+dados.rua
 	else if(dados.endereço && dados.endereço != '')
-		dadosFormatados += 'Endereço: '+dados.endereço
+		dadosFormatados += '<b>Endereço:</b> '+dados.endereço
 
 	if(dados.cep && dados.cep != '')
-		dadosFormatados += '<br>Cep: '+dados.cep
+		dadosFormatados += '<br><b>Cep:</b> '+dados.cep
 	if(dados.bairro && dados.bairro != '')
-		dadosFormatados += '<br>Bairro: '+dados.bairro
+		dadosFormatados += '<br><b>Bairro:</b> '+dados.bairro
 	if(dados.telefone && dados.telefone != '')
-		dadosFormatados += '<br>Telefone: '+dados.telefone
+		dadosFormatados += '<br><b>Telefone:</b> '+dados.telefone
 	if(dados.horario && dados.horario != '')
-		dadosFormatados += '<br>Horários: '+dados.horario
+		dadosFormatados += '<br><b>Horários:</b> '+dados.horario
 	if(dados.residuos && dados.residuo != '')
-		dadosFormatados += '<br>Residuos: '+dados.residuos
+		dadosFormatados += '<br><b>Residuos:</b> '+dados.residuos
 	if(dados.empresa_coletora && dados.empresa_coletora != '')
-		dadosFormatados += '<br>Empresa coletora: '+dados.empresa_coletora
+		dadosFormatados += '<br><b>Empresa coletora:</b> '+dados.empresa_coletora
 	return dadosFormatados;
 	
 }
@@ -91,13 +91,13 @@ function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson,pathJson){
           	    <div class="modal-content">\
           	      <div class="modal-header">\
           	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>\
-          	        <h4 class="modal-title">'+tituloDialogo+'</h4>\
+          	        <h3 class="modal-title">'+tituloDialogo+'</h3>\
           	      </div>\
           	      <div class="modal-body">\
           	        <p>'+conteudoDialogo+'</p>\
           	      </div>\
           	      <div class="modal-footer">\
-          	        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>\
+          	        <button type="button" class="btn btn-success" data-dismiss="modal">Fechar</button>\
         		 </div>\
           	    </div>\
           	  </div>\
@@ -158,9 +158,39 @@ function obtemDadosJsonERenderizaNoMapa(pathJson){
 	       
 }
 
+function alteraCartilha(pathJson){
+
+  if (pathJson.toLowerCase().indexOf("pilha") != -1){
+    return;
+  }
+
+
+
+
+  if (pathJson.toLowerCase().indexOf("oleo") != -1){
+    return;
+  }
+
+
+  if (pathJson.toLowerCase().indexOf("eletronicos") != -1){
+    return;
+  }
+
+
+  if (pathJson.toLowerCase().indexOf("pilha") != -1){
+    return;
+  }
+
+
+  if (pathJson.toLowerCase().indexOf("pneu") != -1){
+    return;
+  }
+
+}
+
 //manter a portabilidade com o html atual
 function obtemLatitudesERenderizaNoMapa(pathJson){
-	obtemDadosJsonERenderizaNoMapa(pathJson);
+	obtemDadosJsonERenderizaNoMapa(pathJson);  
 }
 
 function posicionaMapaPoa(){
