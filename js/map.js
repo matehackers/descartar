@@ -207,6 +207,8 @@ $(document).ready(function(){
     mapnik = new OpenLayers.Layer.OSM();
     map.addLayer(mapnik);
     posicionaMapaPoa();
+
+    
         
     
 });

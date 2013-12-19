@@ -54,3 +54,8 @@
 .thumbnail{  
     height: 465px;
 }
+
+.btn{
+
+  border-radius:5px;
+}
