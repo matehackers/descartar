@@ -1,7 +1,7 @@
 function load_page () {
 
   function format(state) {
-    return '<i class="btn btn-default btn-sm go-away-right fa fa-' + state.glyph + '"></i>' + state.text
+    return '<i class=" go-away-right fa fa-' + state.glyph + '"></i>' + state.text
   };
 
   $("#select_query").select2({
@@ -20,10 +20,8 @@ $(document).ready(function() {
 
   $("#select_query").on("change", function(e){
     residue_options[e.added.text]();
-    //$('.thumbnail img').attr('src', )
-    $('.thumbnail .caption h3').text(e.added.text);
-    $('.thumbnail .caption p').text(residue_text[e.added.text]);
-    $('.thumbnail #icone').attr('class', 'fa fa-' + residue_glyphs[e.added.text]+' fa-stack-1x fa-inverse');
+    $('.info h3').text(e.added.text);
+    $('.info p').text(residue_text[e.added.text]);
   });
 
 });

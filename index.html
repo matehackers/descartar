@@ -9,8 +9,7 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="css/lighter.css" rel="stylesheet">
     <link href="css/mate.css" rel="stylesheet">
-
-</head>
+  </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
@@ -22,69 +21,44 @@
           </button>
           <a class="navbar-brand nav-link" href="http://matehackers.org">#matehackers</a>
         </div> <!-- /.navbar-header -->
-
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#features" class="nav-link">Como usar</a></li>
-            <li><a href="#faqs" class="nav-link">FAQs</a></li>
             <li><a href="#about" class="nav-link">Sobre</a></li>
           </ul>
         </div> <!-- /.navbar-collapse -->
       </div> <!-- /.container -->
     </nav> <!-- /.navbar -->
-
     <div id="top" class="jumbotron">
       <div class="container">
         <img src="img/LOGO_PAPA_TUDO.png" alt="yum..">
         <h1>Descartar.net</a></h1>
         <h3>Descubra onde descartar qualquer resíduo na cidade de Porto Alegre</h3>
-        <!-- <p><a class="btn btn-primary btn-lg">Sign Up Today <span class="glyphicon glyphicon-circle-arrow-right"></span></a></p> -->
       </div> <!-- /.container -->
     </div> <!-- /.jumbotron -->
-
     <div class="container">
-      <h3 id="features" class="subhead">Como usar</h3>
-      <div class="row benefits">
-        <div class="col-md-4 col-sm-6 benefit">
-          <div class="benefit-ball">
-            <span class="glyphicon glyphicon-search"></span>
-          </div>
-          <h3>Passo 1:</h3>
-          <p>Digite o nome do produto que deseja descartar.</p>
-        </div> <!-- /.benefit -->
-
-        <div class="col-md-4 col-sm-6 benefit">
-          <div class="benefit-ball">
-            <span class="glyphicon glyphicon-map-marker"></span>
-          </div>
-          <h3>Passo 2:</h3>
-          <p>Leia as informações.</p>
-        </div> <!-- /.benefit -->
-
-        <div class="col-md-4 col-sm-6 benefit">
-          <div class="benefit-ball">
-            <span class="glyphicon glyphicon-trash"></span>
-          </div>
-          <h3>Passo 3:</h3>
-          <p>Descarte o seus resíduos da maneira mais correta.</p>
-        </div> <!-- /.benefit -->
-      </div> <!-- /.row -->
-    </div> <!-- /.container -->
-
-    <div class="container-alternate" id="select_container">
-      <div class="container">
-        <div class="row">
-          <h3 class="subhead title-text">O que você gostaria de descartar?</h3>
+      <div class="row">
+        <div  class="col-md-12 col-xs-12 col-lg-12 col-sm-12 info-padding">
+          <input id="select_query" ></input>
         </div>
+        </div>          
         <div class="row">
-          <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12">
-              <input id="select_query">
-              </input>
-          </div>
+          <center>
+            <div class="text-center col-xs-12 col-sm-4 col-md-4 col-lg-1">
+              <span class="fa-stack fa-lg fa-1x">
+                <i class="fa fa-circle fa-stack-2x "></i> <!-- circulo fundo -->
+                <i class=" fa fa-info fa-stack-1x fa-inverse" id="icone"></i>
+              </span>
+            </div>
+            <div class="info thumbnail">
+              <h3>Informações</h3>
+              <p>Após selecionar o tipo de resíduo, observe os pontos de coleta no mapa ao lado. Clicando nos pontos do mapa, é possível obter informações detalhadas sobre cada ponto de coleta.</p>
+            </div>
+          </center>
         </div>
       </div>
-    </div>
-
+    </div> <!-- /.container -->
+    <div class="container-alternate" id="select_container"></div>
     <div class="container">
       <div class="row about">
         <div id="how-to-discard" class="col-md-10 col-md-offset-1 text-center">
@@ -97,32 +71,9 @@
 
     <div class="container-alternate">
       <div class="container">
-        <div class="row">
-         
-          <!-- Pilha -->
-          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" id="containerPilha">
-              <div class="thumbnail">              
-                <div class="row text-center">
-                  <!--icone -->
-                  <span class="fa-stack fa-lg fa-5x">
-                    <i class="fa fa-circle fa-stack-2x "></i> <!-- circulo fundo -->
-                    <i class=" fa fa-search fa-stack-1x fa-inverse" id="icone"></i>
-                  </span>
-
-                </div>
-                <div class="caption">
-                  <h3>Informações</h3>
-                  <p>Após selecionar o tipo de resíduo, observe os pontos de coleta no mapa ao lado. Clicando nos pontos do mapa, é possível obter informações detalhadas sobre cada ponto de coleta.</p>
-                </div>
-            </div>
-          </div>
-
-          <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
-            <div id="tour_container">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <div id="tour"> </div> <!-- #tour -->
-            </div>
           </div> <!-- /.col-md-12 -->
-        </div>
       </div> <!-- /.container -->
     </div>
 
@@ -131,8 +82,10 @@
       <div class="row about">
         <div class="col-md-10 col-md-offset-1 text-center">
           <p>
+              <img src="http://matehackers.org/lib/exe/fetch.php?w=400&media=mh.jpg">
+          </p>
+          <p>
              <u>Hackerspace = espaço + hackers</u><br>
-
 Somos um grupo de entusiastas por tecnologia e conhecimento chamado Matehackers. <br>Nós acreditamos que o conhecimento é um direito básico e universal. A livre troca de idéias e o incentivo a concretizar os seus projetos é premissa básica da existencia do Matehackers.
 
 <br>Por isso oferecemos um espaço - um Hackerspace - para reunir toda esta gente. Um espaço livre onde qualquer um possa ir a qualquer momento e trabalhar em projetos de qualquer tipo, relacionados a tecnologia. 
@@ -140,10 +93,6 @@ Somos um grupo de entusiastas por tecnologia e conhecimento chamado Matehackers.
           <p>
            O Matehackers está fisicamente localizado dentro do Bunker 360 em Porto Alegre. 
           </p>
-          
-          
-         
-          
         </div> <!-- /.col-md-10 -->
       </div> <!-- /.row -->
     </div> <!-- /.container -->

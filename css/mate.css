@@ -1,7 +1,7 @@
 
 #tour {
   height: 465px;
-  border-radius:5px;
+  border-radius:px;
   overflow:hidden;
 
 }
@@ -21,34 +21,38 @@
       height: 365px;
     }
 }
-#select_query{
-  width: 100%;
+
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.red {
+  height: 100%;
+  background-color: red;
 }
 
-.container-alternate {
-    padding-bottom: 35px;
+.info {
+  width: 25%;
+  text-align: center;
+}
+
+.info-padding {
+  padding: 3em;
+}
+
+#select_query{
+  width: 100%;
 }
 
 .container-alternate, .jumbotron, footer {
   background-color: #54C571;
 }
 
-#select_container {
-  padding: 20px
-}
-
 .thumbnail img{
   position:relative;
 }
-
-/*
-.thumbnail i {
-  position: relative;
-  padding-top: 20px;
-  padding-left: 95px;
-  float: center;
-}*/
-
 
 /*cartilha*/
 .thumbnail{  
