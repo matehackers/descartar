@@ -6,11 +6,16 @@ function load_page () {
 
   $("#select_query").select2({
     width: "element",
+    placeholder: "Selecione ou digite o tipo de resíduo",
     data: select_options(),
     formatResult: format,
     formatSelection: format,
     escapeMarkup: function(m) { return m; }
   });
+
+
+
+        
 
 }
 
