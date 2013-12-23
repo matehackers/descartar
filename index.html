@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>matehackers.org  </title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -9,104 +9,118 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="css/lighter.css" rel="stylesheet">
     <link href="css/mate.css" rel="stylesheet">
-  </head>
-  <body>
+</head>
+<body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand nav-link" href="http://matehackers.org">#matehackers</a>
-        </div> <!-- /.navbar-header -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav navbar-right">            
-            <li><a href="#features" class="nav-link">Como usar</a></li>
-            <li><a href="#about" class="nav-link">Sobre</a></li>            
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
+                <a class="navbar-brand nav-link" href="http://matehackers.org">#matehackers</a>
+            </div> <!-- /.navbar-header -->
 
-          </ul>
-        </div> <!-- /.navbar-collapse -->
-      </div> <!-- /.container -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">            
+                    <li> <a href="#descarte" class="nav-link">Descarte!</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li> 
+                </ul>
+            </div> <!-- /.navbar-collapse -->
+        </div> <!-- /.container -->
     </nav> <!-- /.navbar -->
-    <div id="top" class="jumbotron">
-      <div class="container">
-        <img src="img/LOGO_PAPA_TUDO.png" alt="yum..">
-        <a href="https://github.com/matehackers/descartar"><img style=" z-index: 99999;position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
-        <h1>Descartar.net</a></h1>
-        <h3>Descubra onde descartar qualquer resíduo na cidade de Porto Alegre</h3>
-      </div> <!-- /.container -->
+
+    <div class="jumbotron">
+        <div class="container">
+            <img src="img/LOGO_PAPA_TUDO.png" alt="yum..">
+            
+            <h1>Descartar.net</h1>
+            <h3>Descubra onde descartar qualquer resíduo na cidade de Porto Alegre</h3>
+        </div> <!-- /.container -->
     </div> <!-- /.jumbotron -->
-    <div class="container">
-      <div class="row">
-        <center><h3>Qual produto deseja descartar?</h3></center>
-        <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12 info-padding">
-          <input id="select_query" ></input>
+
+    <div class="container"> 
+        <div class="row">
+            <h3 class="text-center" id="descarte">O que desejas descartar?</h3>
         </div>
-      </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12 select-padding">
+                <input id="select_query" class="interavel"> 
+            </div>
+        </div>    
     </div> <!-- /.container -->
     <div class="container-alternate">
-      <div class="container">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <div id="tour"> </div>
-          </div>
-      </div>
+        <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="tour" class="interavel"> </div>
+            </div>
+        </div>
     </div>
 
     <div class="container">
-      <h3 id="about" class="subhead">Quem somos</h3>
-      <div class="row about">
-        <div class="col-md-10 col-md-offset-1 text-center">
-          <p>
-            <img src="http://matehackers.org/lib/exe/fetch.php?w=400&media=mh.jpg">
-          </p>
-          <p>
-            <u>Hackerspace = espaço + hackers</u><br>
-            Somos um grupo de entusiastas por tecnologia e conhecimento chamado Matehackers. <br>Nós acreditamos que o conhecimento é um direito básico e universal. A livre troca de idéias e o incentivo a concretizar os seus projetos é premissa básica da existencia do Matehackers.
+        <h3 id="about" class="subhead">Quem somos</h3>
+            <div class="row about text-center"> 
+                <p>           
+                    <img src="http://matehackers.org/lib/exe/fetch.php?w=400&media=mh.jpg" class="img-responsive img-responsive-fix">
+                </p>
+            </div>
+            <div class="row about">
+                <div class="col-md-10 col-md-offset-1 text-center">
+                    <p>
+                        <u>Hackerspace = espaço + hackers</u><br>
+                        Somos um grupo de entusiastas por tecnologia e conhecimento chamado Matehackers. <br>Nós acreditamos que o conhecimento é um direito básico e universal. A livre troca de idéias e o incentivo a concretizar os seus projetos é premissa básica da existencia do Matehackers.
 
-            <br>Por isso oferecemos um espaço - um Hackerspace - para reunir toda esta gente. Um espaço livre onde qualquer um possa ir a qualquer momento e trabalhar em projetos de qualquer tipo, relacionados a tecnologia. 
-          </p>
-          <p>
-            O Matehackers está fisicamente localizado dentro do Bunker 360 em Porto Alegre. 
-          </p>
-        </div> <!-- /.col-md-10 -->
-      </div> <!-- /.row -->
+                        <br>Por isso oferecemos um espaço - um Hackerspace - para reunir toda esta gente. Um espaço livre onde qualquer um possa ir a qualquer momento e trabalhar em projetos de qualquer tipo, relacionados a tecnologia. 
+                    </p>
+                    <p>
+                        O Matehackers está fisicamente localizado dentro do Bunker 360 em Porto Alegre. 
+                    </p>
+                </div> <!-- /.col-md-10 -->
+            </div> <!-- /.row -->
     </div> <!-- /.container -->
 
     <footer>
-      <div class="container clearfix">
+        <div class="container clearfix">
 
-        <div class="row">
-          <div class="col-md-4 text-center"> <!-- col1-->
-            <p  style="color:#222222;">
-              Copyleft &copy; <a href="http://matehackers.org" style="color:#222222;">#matehackers 2013</a>
-            </p>
-          </div>
+            <div class="row">
+                <div class="col-md-3 text-center interavel"> <!-- col1-->
+                    <p  style="fonte-preta">
+                        Copyleft &copy; <a href="http://matehackers.org" class="fonte-preta">#matehackers</a>
+                    </p>
+                </div>
 
-          <div class="col-md-4 text-center"> <!-- col2-->
-            <!-- face -->
-              <div id="fb-root"></div>
-              <script>
-                  (function(d, s, id) {
-                      var js, fjs = d.getElementsByTagName(s)[0];
-                      if (d.getElementById(id)) return;
-                      js = d.createElement(s); js.id = id;
-                      js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
-                      fjs.parentNode.insertBefore(js, fjs);
-                  }(document, 'script', 'facebook-jssdk'));
-                </script>
-                <div class="fb-share-button" data-href="http://www.matehackers.org" data-type="button_count"></div>
-            <!-- -->
-          </div>
+                <div class="col-md-3 text-center interavel"> <!-- col1-->
+                    <p >
+                        <a href="http://datapoa.com.br" class="fonte-preta">#datapoa</a>
+                    </p>
+                </div>
 
-        <div class="col-md-4 text-center"><!-- col3-->
-          <p>
-            a template from <a href="http://coverstrap.com" style="color: #222222;">Coverstrap</a>
-          </p>
-        </div>
-      </div> <!-- /.container -->
+                <div class="col-md-3 text-center interavel"> <!-- col2-->
+                    <p>
+                        <!-- face -->
+                        
+                        <script>
+                          (function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                        </script>
+                        <div class="fb-share-button" data-href="http://www.matehackers.org" data-type="button_count"></div>
+                        <!-- -->
+                    </p>
+                </div>
+
+                <div class="col-md-3 text-center interavel"> <!-- col3-->
+                    <p>
+                        a template from <a href="http://coverstrap.com" class="fonte-preta">Coverstrap</a>
+                    </p>
+                </div>  
+        </div> <!-- /.container -->
     </footer>
 
     <script src="js/jquery.js"></script>
@@ -116,14 +130,56 @@
     <script src="js/map.js"></script>
     <script src="js/api.js"></script>
     <script>
-      $(".nav-link").click(function(e) {
-        e.preventDefault();
-        var link = $(this);
-        var href = link.attr("href");
-        $("html,body").animate({scrollTop: $(href).offset().top - 80}, 500);
-        link.closest(".navbar").find(".navbar-toggle:not(.collapsed)").clit ck();
+        $(".nav-link").click(function(e) {
+          e.preventDefault();
+          var link = $(this);
+          var href = link.attr("href");
+          $("html,body").animate({scrollTop: $(href).offset().top - 80}, 500);
+          link.closest(".navbar").find(".navbar-toggle:not(.collapsed)").clit ck();
       });
     </script>
 
-  </body>
+
+
+
+    <!-- janela de info/modal-->
+    <div class="modal fade" id="_modal_info">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title"></h3>
+                </div>                    
+
+                <div class="modal-body">
+                    <!-- informacoes do local-->
+                    <div class="row">
+                        <div class="info-local"></div>
+                    </div>
+                    <!-- informacoes do residuo-->
+                    <div class="row">
+                        <div class="info thumbnail alert alert-success">
+                            <span class="fa-stack fa-lg fa-1x">
+                                <i class="fa fa-circle fa-stack-2x "></i> <!-- circulo fundo -->
+                                <i class=" fa fa-info fa-stack-1x fa-inverse" id="icone"></i>
+                            </span>
+                        <h3 id="info_titulo">Informações</h3>
+                        <p id="info_texto">Após selecionar o tipo de resíduo, observe os pontos de coleta no mapa ao lado. Clicando nos pontos do mapa, é possível obter informações detalhadas sobre cada ponto de coleta.</p>
+                        </div>
+                    </div>                
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- -->
+<div class="overlay"></div>
+</body>
+
 </html>

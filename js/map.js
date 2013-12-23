@@ -86,32 +86,11 @@ function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson,pathJson){
         	tituloDialogo=this.dados.nome;
         	conteudoDialogo=obtemConteudoDialogoApartirFormatoJson(pathJson,this.dados);        	
         	
-        	bootStrapModal='<div class="modal fade" id="_modal_info">\
-          	  <div class="modal-dialog">\
-          	    <div class="modal-content">\
-          	      <div class="modal-header">\
-          	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>\
-          	        <h3 class="modal-title">'+tituloDialogo+'</h3>\
-          	      </div>\
-          	      <div class="modal-body">\
-          	        <p>'+conteudoDialogo+'</p>\
-          	      </div>\
-          	      <div class="modal-footer">\
-          	        <button type="button" class="btn btn-success" data-dismiss="modal">Fechar</button>\
-        		 </div>\
-          	    </div>\
-          	  </div>\
-          	</div>';
+        	//seta conteudo da modal
+          $('#_modal_info .modal-title').html(tituloDialogo);          
+          $('#_modal_info .info-local').html(conteudoDialogo);
 
-        	$('body').append(bootStrapModal);//adiciona DOM da modal
-        	
-        	$('#_modal_info').modal('show'); //exibe-a
-        	
-        	//vincula evento que remove o DOM criado ao fecharmos a modal
-        	$('#_modal_info').on('hidden.bs.modal', function () {
-        		this.remove(); //remove dom desse elemento
-        		
-        	});
+          $('#_modal_info').modal('show'); //exibe modal (dados restantes ja foram preenchidos pela select)
         	
         });
         layerMarcadores.addMarker(marker);       
@@ -208,6 +187,8 @@ $(document).ready(function(){
     map.addLayer(mapnik);
     posicionaMapaPoa();
 
+
+    $('#_modal_info').hide();
 
 
     

@@ -1,9 +1,9 @@
 
 #tour {
   height: 465px;
-  border-radius:px;
+  border-radius:1px;
   overflow:hidden;
-
+  
 }
 
 .go-away-right {
@@ -11,9 +11,9 @@
 }
 
 .select2-container .select2-choice {
-  font-size: 2em;
-  height: 1.5em;
-  line-height: 1.5em;    
+  font-size: 1.5em;
+  height: 2em;
+  line-height: 2em;    
 }
 
 @media screen and (max-width: 780px) {
@@ -33,12 +33,19 @@
   background-color: red;
 }
 
+
+.modal-header{
+  color: #FFFEEE;
+  background-color: #368F5F;
+}
 .info {
-  width: 25%;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+  margin-top:40px; /*modal-body tem padding de 40 (20 em cima e 20 embaixo)*/
 }
 
-.info-padding {
+.select-padding {
   padding: 3em;
 }
 
@@ -50,16 +57,36 @@
   background-color: #54C571;
 }
 
-.thumbnail img{
-  position:relative;
-}
-
-/*cartilha*/
-.thumbnail{  
-    height: 465px;
+.fonte-preta{
+  color: #222222;
 }
 
 .btn{
 
   border-radius:5px;
 }
+.img-responsive-fix {
+  margin: 0 auto;
+}
+
+
+
+
+.overlay {
+    opacity:1;
+    background: -webkit-radial-gradient(top center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 100%);
+    background-image: url('../img/overlay.png');
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:500;
+    
+}
+
+.interavel{
+  z-index:1000; /*tudo com z-index acima da overlay*/
+
+}
+

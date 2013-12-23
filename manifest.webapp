@@ -1,0 +1,12 @@
+{
+  "name": "Descartar.net",
+  "description": "Descubra onde descartar seus residuos na cidade de Porto Alegre",
+  "launch_path": "/index.html",
+  "icons": { "128": "/img/LOGO_PAPA_TUDO.png" },
+  "developer": {
+    "name": "Matehackers",
+    "url": "http://matehackers.org"
+  },
+  "default_locale": "en"
+}
+
