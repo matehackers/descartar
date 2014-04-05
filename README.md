@@ -16,7 +16,7 @@ Dados do Projeto:
 Integrantes:
 
       Alan Ficagna
-      Iuri Guilherme
+      ~~Iuri Guilherme~~ que mania de botar meu nome nessas coisas sem avisar o cara
       Lizardo Kist
       Lucas Zawacki
       Mario Gasparoni
