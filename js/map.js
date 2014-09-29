@@ -70,33 +70,33 @@ function obtemConteudoDialogoApartirFormatoJson(pathJson,dados){
 }
 
 function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson,pathJson){
-    
+
     var size = new OpenLayers.Size(21,25); 
     var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
     var icon;
-    
-    
-    for(var i=0;i<dadosJson.length;i++){   
-        icon = new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png', size, offset);
+
+    for(var i=0;i<dadosJson.length;i++) {
+        icon = new OpenLayers.Icon('img/marker.png', size, offset);
         //console.debug(dadosJson[i]);
-        var marker =new OpenLayers.Marker(dadosJson[i].smpPosition,icon);        
+        var marker =new OpenLayers.Marker(dadosJson[i].smpPosition,icon);
         icon.imageDiv.dados=dadosJson[i]; //salva dados no proprio objeto
         $(icon.imageDiv).click(function(){
-        	
-        	tituloDialogo=this.dados.nome;
-        	conteudoDialogo=obtemConteudoDialogoApartirFormatoJson(pathJson,this.dados);        	
-        	
-        	//seta conteudo da modal
-          $('#_modal_info .modal-title').html(tituloDialogo);          
+
+          tituloDialogo=this.dados.nome;
+          conteudoDialogo=obtemConteudoDialogoApartirFormatoJson(pathJson,this.dados);
+
+          //seta conteudo da modal
+          $('#_modal_info .modal-title').html(tituloDialogo);
           $('#_modal_info .info-local').html(conteudoDialogo);
 
           $('#_modal_info').modal('show'); //exibe modal (dados restantes ja foram preenchidos pela select)
-        	
+
         });
-        layerMarcadores.addMarker(marker);       
+        layerMarcadores.addMarker(marker);
         
     }
 }
+
 
 function resetaMapa(){
 	map.destroy();
