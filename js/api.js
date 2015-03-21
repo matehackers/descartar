@@ -13,10 +13,6 @@ function load_page () {
     escapeMarkup: function(m) { return m; }
   });
 
-
-
-        
-
 }
 
 $(document).ready(function() {
@@ -28,8 +24,6 @@ $(document).ready(function() {
     $('.info h3').text(e.added.text);
     $('.info p').html(residue_text[e.added.text]); //utiliza texto no formato html
     $('.info #icone').attr('class', 'fa fa-' + residue_glyphs[e.added.text]+' fa-stack-1x fa-inverse');
-
-
   });
 
 });
@@ -56,6 +50,16 @@ function batteries()
 
 function where_bought()
 {
+  tituloDialogo= "Lâmpadas";
+  // IURI COLOCA O QUE VOCE QUISER AQUI
+  conteudoDialogo= "<p>Lâmpadas devem ser entregues no estabelecimento onde foram compradas";
+
+  //seta conteudo da modal
+  $('#_modal_info .modal-title').html(tituloDialogo);
+  $('#_modal_info .info-local').html(conteudoDialogo);
+
+  $('#_modal_info').modal('show'); //exibe modal (dados restantes ja foram preenchidos pela select)
+
 }
 
 function medicine()
