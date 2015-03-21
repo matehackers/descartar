@@ -75,25 +75,28 @@ function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson,pathJson){
     var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
     var icon;
 
+    function buildMmodal(){
+
+              tituloDialogo=this.dados.nome;
+              conteudoDialogo=obtemConteudoDialogoApartirFormatoJson(pathJson,this.dados);
+
+              //seta conteudo da modal
+              $('#_modal_info .modal-title').html(tituloDialogo);
+              $('#_modal_info .info-local').html(conteudoDialogo);
+
+              $('#_modal_info').modal('show'); //exibe modal (dados restantes ja foram preenchidos pela select)
+    }
+
     for(var i=0;i<dadosJson.length;i++) {
         icon = new OpenLayers.Icon('img/marker.png', size, offset);
         //console.debug(dadosJson[i]);
         var marker =new OpenLayers.Marker(dadosJson[i].smpPosition,icon);
         icon.imageDiv.dados=dadosJson[i]; //salva dados no proprio objeto
-        $(icon.imageDiv).click(function(){
+        $(icon.imageDiv).click(buildMmodal);
 
-          tituloDialogo=this.dados.nome;
-          conteudoDialogo=obtemConteudoDialogoApartirFormatoJson(pathJson,this.dados);
+        $(icon.imageDiv).on("touchstart",buildMmodal);
 
-          //seta conteudo da modal
-          $('#_modal_info .modal-title').html(tituloDialogo);
-          $('#_modal_info .info-local').html(conteudoDialogo);
-
-          $('#_modal_info').modal('show'); //exibe modal (dados restantes ja foram preenchidos pela select)
-
-        });
         layerMarcadores.addMarker(marker);
-        
     }
 }
 
