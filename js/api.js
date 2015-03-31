@@ -13,10 +13,6 @@ function load_page () {
     escapeMarkup: function(m) { return m; }
   });
 
-
-
-        
-
 }
 
 $(document).ready(function() {
@@ -28,8 +24,6 @@ $(document).ready(function() {
     $('.info h3').text(e.added.text);
     $('.info p').html(residue_text[e.added.text]); //utiliza texto no formato html
     $('.info #icone').attr('class', 'fa fa-' + residue_glyphs[e.added.text]+' fa-stack-1x fa-inverse');
-
-
   });
 
 });
@@ -56,6 +50,18 @@ function batteries()
 
 function where_bought()
 {
+  tituloDialogo= "Lâmpadas";
+  // IURI COLOCA O QUE VOCE QUISER AQUI
+  // Vejamos o que eu quero... Depois eu decido. Agora o código:
+  conteudoDialogo= "<p>Lâmpadas devem ser entregues no estabelecimento onde foram compradas.</p><p>Qualquer estabelecimento que vende lâmpadas deve recebê-las. Alguns estabelecimentos podem exigir a nota fiscal como comprovante de compra da lâmpada.<br />Apesar de isto ser legal, é anti ético. Mas não faça barraco desnecessário. Simplesmente compre uma lâmpada nova e leve a nota fiscal juntamente com a lâmpada antiga no dia seguinte.</p><p>Caso o estabelecimento se recuse a receber lâmpadas, anote o endereço e ligue para o 156, opção 9 para denunciar o estabelecimento para a Secretaria Municipal de Indústria e Comércio de Porto Alegre.<br />É possível fazer a denúncia em carater sigiloso.<br />Também é possível denunciar estabelecimentos que recebem lâmpadas e descartam-nas no lixo comum.<br />Fiscalizar o destino correto dos resíduos é um ato de cidania e uma forma de ativismo por consciência ambiental.</p>";
+  // TODO: Colocar o número do decreto que regulamenta isto em Porto Alegre e atualizar o texto.
+
+  //seta conteudo da modal
+  $('#_modal_info .modal-title').html(tituloDialogo);
+  $('#_modal_info .info-local').html(conteudoDialogo);
+
+  $('#_modal_info').modal('show'); //exibe modal (dados restantes ja foram preenchidos pela select)
+
 }
 
 function medicine()
@@ -144,7 +150,7 @@ adequadamente, doando seus resíduos preferencialmente para cooperativas de cata
 
   "Lâmpadas" : "<p>Assim como o e-lixo as lâmpadas fluorescentes devem ser descartadas de forma correta, e o motivo é o mesmo em ambos os casos: existência de substâncias tóxicas que prejudicam o meio ambiente e trazem problemas de saúde à população.</p>\
                 <p>No caso das lâmpadas fluorescentes, o protagonista da substância tóxica é o chamado mercúrio e fósforo. Infelizmente, muitas pessoas ainda não tem conhecimento dessa realidade e por isso, não sabem o quão perigoso é descartar esse tipo de lâmpada nos lixos comuns. A consequência é o descarte incorreto.</p>\
-                <p>O certo é entregar as lâmpadas aos fabricantes, os quais, segundo lei já existente, são responsáveis em recolhê-las. Outra opção é levá-las aos centros de descarte, mas vale mencionar que alguns cobram uma taxa média de R$1 para recebê-la. A justificativa dessa cobrança é as lâmpadas passarão posteriormente por um processo de descontaminação.</p>\
+                <p>O certo é entregar as lâmpadas aos fabricantes, os quais, segundo lei já existente, são responsáveis em recolhê-las. Outra opção é levá-las aos centros de descarte, mas vale mencionar que alguns cobram uma taxa média de R$ 1,00 para recebê-la. A justificativa dessa cobrança é as lâmpadas passarão posteriormente por um processo de descontaminação.</p>\
                 <p>Esse procedimento ocorre da seguinte forma:</p>\
                 <ul>\
                     <li>As lâmpadas recebidas são separadas de acordo com seu tamanho</li>\
