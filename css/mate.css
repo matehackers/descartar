@@ -3,8 +3,11 @@
   height: 465px;
   border-radius:1px;
   overflow:hidden;
-  
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: default;
 }
+
 
 .go-away-right {
   margin-right: 1em;
@@ -88,5 +91,9 @@
 .interavel{
   z-index:1000; /*tudo com z-index acima da overlay*/
 
+}
+
+.interavel .ol-viewport {
+  z-index:1000; /*tudo com z-index acima da overlay*/
 }
 

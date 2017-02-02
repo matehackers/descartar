@@ -6,11 +6,8 @@
 
 function criaSmpPosition(latitude,longitude){
 	//dada uma latitude/longitude WGS, converte para SMP
-	
-	var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transforma de WGS 1984
-    var toProjection   = new OpenLayers.Projection("EPSG:900913"); // para Spherical Mercator Projection
-    return new OpenLayers.LonLat(longitude, latitude).transform( fromProjection, toProjection);	
-	
+	// Transforma de WGS 1984 para Spherical Mercator Projection
+    return new ol.proj.transform([longitude, latitude], 'EPSG:4326', 'EPSG:900913');
 }
 
 function obtemPosicaoCentro(dadosJson){
@@ -71,8 +68,8 @@ function obtemConteudoDialogoApartirFormatoJson(pathJson,dados){
 
 function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson,pathJson){
 
-    var size = new OpenLayers.Size(21,25); 
-    var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+    var size = new ol.Size(21,25); 
+    var offset = new ol.Pixel(-(size.w/2), -size.h);
     var icon;
 
     function buildMmodal(){
@@ -88,9 +85,9 @@ function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson,pathJson){
     }
 
     for(var i=0;i<dadosJson.length;i++) {
-        icon = new OpenLayers.Icon('img/marker.png', size, offset);
+        icon = new ol.Icon('img/marker.png', size, offset);
         //console.debug(dadosJson[i]);
-        var marker =new OpenLayers.Marker(dadosJson[i].smpPosition,icon);
+        var marker =new ol.Marker(dadosJson[i].smpPosition,icon);
         icon.imageDiv.dados=dadosJson[i]; //salva dados no proprio objeto
         $(icon.imageDiv).click(buildMmodal);
 
@@ -102,10 +99,19 @@ function adicionaMarcadoresNaLayer(layerMarcadores,dadosJson,pathJson){
 
 
 function resetaMapa(){
-	map.destroy();
-    map = new OpenLayers.Map("tour");
-    var mapnik = new OpenLayers.Layer.OSM();
-    map.addLayer(mapnik);	
+	map = new ol.Map({
+		layers: [
+			new ol.layer.Tile({
+				source: new ol.source.OSM()
+			})
+		],
+		target: 'tour',
+		view: new ol.View({
+			projection: 'EPSG:4326',
+			center: [-51.2300, -30.0331], // coordenadas de Porto Alegre
+			zoom: 12
+		})
+	});
 }
 
 function obtemDadosJsonERenderizaNoMapa(pathJson){
@@ -117,17 +123,14 @@ function obtemDadosJsonERenderizaNoMapa(pathJson){
     resetaMapa();
     
     //layer para marcadores(pontos)
-    var layerMarcadores = new OpenLayers.Layer.Markers( "Markers" );
+    var layerMarcadores = new ol.layer.markers( "Markers" );
     map.addLayer(layerMarcadores);      
-    
     
     $.getJSON(pathJson,function(result){
         $.each(result, function(key, field){        	
         	//console.debug(field);
         	//adiciona cada entrada do json no array de dados        	
-        	dadosJson.push(field);
-        	
-        	
+        	dadosJson.push(field);      	
         });
         
         adicionaSmpPositions(dadosJson);        
@@ -174,25 +177,10 @@ function alteraCartilha(pathJson){
 function obtemLatitudesERenderizaNoMapa(pathJson){
 	obtemDadosJsonERenderizaNoMapa(pathJson);  
 }
-
-function posicionaMapaPoa(){
-	var latPoa=-30.0331;
-	var longiPoa=-51.2300;
-	var posicaoPoa=criaSmpPosition(latPoa,longiPoa);
-	map.setCenter(posicaoPoa,12);
-	
-}
 	
 $(document).ready(function(){	
-
-    map = new OpenLayers.Map("tour");
-    mapnik = new OpenLayers.Layer.OSM();
-    map.addLayer(mapnik);
-    posicionaMapaPoa();
-
+	resetaMapa();
 
     $('#_modal_info').hide();
-
-
-    
+ 
 });
