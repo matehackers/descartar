@@ -3,7 +3,6 @@
   height: 465px;
   border-radius:1px;
   overflow:hidden;
-  
 }
 
 .go-away-right {
@@ -13,7 +12,7 @@
 .select2-container .select2-choice {
   font-size: 1.5em;
   height: 2em;
-  line-height: 2em;    
+  line-height: 2em;
 }
 
 @media screen and (max-width: 780px) {
@@ -33,7 +32,6 @@
   background-color: red;
 }
 
-
 .modal-header{
   color: #FFFEEE;
   background-color: #368F5F;
@@ -46,7 +44,7 @@
 }
 
 .select-padding {
-  padding: 3em;
+  padding: 0.5em 1em 2em 1em;
 }
 
 #select_query{
@@ -69,9 +67,6 @@
   margin: 0 auto;
 }
 
-
-
-
 .overlay {
     opacity:1;
     background: -webkit-radial-gradient(top center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 100%);
@@ -82,11 +77,9 @@
     top:0px;
     left:0px;
     z-index:500;
-    
 }
 
 .interavel{
   z-index:1000; /*tudo com z-index acima da overlay*/
-
 }
 
